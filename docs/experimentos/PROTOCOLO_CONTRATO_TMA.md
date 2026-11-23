@@ -159,7 +159,7 @@ cast não chega ao `stride_a`. Nos três casos não cobertos, a explicação lid
   fixado em `[1, 256]`); a relação entre os dois registros não foi investigada.
 - `broadcast`: o scheduler nativo recusou a fusão (`prologue fusion that must be
   upcast to fp32 not profitable for low precision templates`), a mesma heurística
-  que já barrava ReLU e a fórmula sem marcação. `prologue_rejections` ficou vazio:
+  que já barrava a ReLU. `prologue_rejections` ficou vazio:
   a guarda `prologue_load_layout` nunca foi chamada.
 - `offset`: expressão sem prólogo, então nenhuma guarda de prólogo se aplica. O
   filtro leu offset zero; a causa não foi verificada no código do Inductor.

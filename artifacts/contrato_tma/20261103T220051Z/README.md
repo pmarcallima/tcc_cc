@@ -39,8 +39,8 @@ também para o `positive`. Os motivos, lidos em `<caso>/patched_fusion.log`:
   stride `[256, 1]`, o layout está fixado em `[1, 256]`) nas compilações desse caso.
   A relação entre os dois registros não foi investigada.
 - `broadcast`: `prologue fusion that must be upcast to fp32 not profitable for low
-  precision templates`, a mesma heurística nativa que já barrava ReLU e a fórmula
-  sem marcação. `prologue_rejections` ficou vazio: a guarda de carga não foi chamada.
+  precision templates`, a mesma heurística nativa que já barrava a ReLU.
+  `prologue_rejections` ficou vazio: a guarda de carga não foi chamada.
 - `offset`: expressão sem prólogo (`x_fp16 @ w_fp16`); só `extern_kernels.mm` executa.
   O filtro leu offset 0. A causa não foi verificada no código do Inductor.
 
