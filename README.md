@@ -4,13 +4,13 @@ Código e dados experimentais do TCC de Pedro M. Lima. O trabalho investiga como
 
 ## O que cada experimento mostra
 
-| Experimento | Pergunta e resultado |
-|---|---|
-| [Protótipo manual](src/tma_prologue_prototype.py) | É possível transformar a entrada e multiplicar as matrizes no mesmo kernel usando TMA? O protótipo fez isso na H100. Nos seis formatos testados, as saídas fundida e não fundida coincidiram e passaram na comparação com a referência. |
-| [Extensão do TorchInductor](src/inductor_tma_prologue_patch.py) | O compilador consegue gerar a fusão para `X.to(torch.float16) @ W`? Com o template TMA fixado, o registro de execução mostrou dois kernels com a fusão desligada e um com ela ligada. O código gerado mostra o valor convertido chegando ao produto matricial. |
-| [Quatro caminhos manuais](src/four_path_benchmark.py) | Quanto muda o tempo de execução ao fundir o prólogo? A comparação é feita dentro de cada família de cargas (convencionais ou TMA). O efeito variou com a expressão, o formato e a configuração. Ao comparar famílias, também podem mudar as instruções que o Triton gera. |
-| [Seleção pelo compilador](experiments/integracao/modal_inductor_free_selection.py) | Qual implementação o Inductor escolhe quando pode comparar alternativas? Com `max-autotune`, nos dois formatos de cast avaliados, escolheu o Triton comum já fundido. |
-| [Limites da extensão](artifacts/contrato_tma/20261103T220051Z/README.md) | O que acontece com entradas fora do domínio suportado? As 16 execuções produziram saídas corretas. Cinco dos oito casos atingiram a verificação interna prevista. A cobertura de entrada não contígua, deslocamento e broadcast segue em aberto. |
+| Experimento | Pergunta e resultado | Evidência |
+|---|---|---|
+| [Protótipo manual](src/tma_prologue_prototype.py) | É possível transformar a entrada e multiplicar as matrizes no mesmo kernel usando TMA? O protótipo fez isso na H100. Nos seis formatos testados, as saídas fundida e não fundida coincidiram e passaram na comparação com a referência. | [Resultados por formato](artifacts/tma_prototype/summary.csv) |
+| [Extensão do TorchInductor](src/inductor_tma_prologue_patch.py) | O compilador consegue gerar a fusão para `X.to(torch.float16) @ W`? Com o template TMA fixado, o registro de execução mostrou dois kernels com a fusão desligada e um com ela ligada. O código gerado mostra o valor convertido chegando ao produto matricial. | [Prova da fusão](artifacts/prova_fusao_tma/20261103T182123Z/README.md) |
+| [Quatro caminhos manuais](src/four_path_benchmark.py) | Quanto muda o tempo de execução ao fundir o prólogo? A comparação é feita dentro de cada família de cargas (convencionais ou TMA). O efeito variou com a expressão, o formato e a configuração. Ao comparar famílias, também podem mudar as instruções que o Triton gera. | [Tabela de tempos](artifacts/four_paths/20261103T131925406353Z/summary.csv) |
+| [Seleção pelo compilador](experiments/integracao/modal_inductor_free_selection.py) | Qual implementação o Inductor escolhe quando pode comparar alternativas? Com `max-autotune`, nos dois formatos de cast avaliados, escolheu o Triton comum já fundido. | [Resultados da seleção](artifacts/free_tma/results.json) |
+| [Limites da extensão](experiments/integracao/modal_contrato_tma.py) | O que acontece com entradas fora do domínio suportado? As 16 execuções produziram saídas corretas. Cinco dos oito casos atingiram a verificação interna prevista. A cobertura de entrada não contígua, deslocamento e broadcast segue em aberto. | [Cobertura dos oito casos](artifacts/contrato_tma/20261103T220051Z/README.md) |
 
 Para conferir a fusão do cast usando a coleta salva na H100, execute na raiz do repositório:
 
