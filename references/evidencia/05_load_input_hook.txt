@@ -1,0 +1,34 @@
+FONTE: torch/_inductor/select_algorithm.py  (load_input, linhas 937-977 resumidas)
+================================================================================
+A macro load_input usada pelo template padrão. Mostra que ela abre um SUBGRAFO
+de codegen (create_subgraph_body) — é nesse subgrafo que o prologue fundido é
+gerado. O template TMA nunca chama essa função.
+--------------------------------------------------------------------------------
+
+    def load_input(
+        self,
+        input_name: str,
+        output_name: str,
+        indices: Union[list[Any], tuple[Any]],
+        mask: Optional[str] = None,
+        other: Optional[Union[float, int]] = 0.0,
+        indent_width: int = 4,
+        index_shape: Optional[tuple[str]] = None,
+    ):
+        """Loads an input and applies any necessary preprocessing or masking."""
+
+        input_node = self.named_input_nodes[input_name]
+        if not self.prologue_loads_all_inputs:
+            self.prologue_supported_inputs.add(input_node.get_name())
+        ...
+        with self.create_subgraph_body(f"<LOAD_INPUT_{input_name}>"):   # <== SUBGRAFO p/ o prologue
+            ...
+
+--------------------------------------------------------------------------------
+LIGAÇÃO com select_algorithm.py:817 (dentro de def_kernel):
+
+        self.codegen_prologue(code)      # gera o código do prologue fundido
+
+PONTO-CHAVE: load_input cria o contexto `<LOAD_INPUT_...>` e o Inductor chama
+codegen_prologue para emitir o op elementwise ali dentro. Sem chamar load_input
+(caso TMA), esse caminho inteiro não existe → nada para fundir.

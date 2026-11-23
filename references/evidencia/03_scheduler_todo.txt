@@ -1,0 +1,42 @@
+FONTE: torch/_inductor/scheduler.py  (linhas 4144-4168)
+================================================================================
+O TODO oficial do PyTorch + o `continue` que efetivamente desliga a fusão de
+prologue quando a choice é o template TMA.
+--------------------------------------------------------------------------------
+
+            else:
+                # By default, don't do prologue fusion. Generally slower      (linha 4144)
+                if not epilogue_fusion:
+                    return FusionResult.fuse(False)
+
+                ms2 = node2._get_estimated_runtime()
+                ms2_fused = _estimate_fused_epilogue_runtime(node1, node2, ms2)
+
+            # Start compiling choices in parallel
+            future_choices: list[tuple[Any, Optional[LambdaFuture], ModuleType]] = []
+            triton_choices = 0
+            for choice, unfused_time in choice_timings_iter:
+                if not isinstance(choice, TritonTemplateCallerBase):
+                    continue
+
+                # For prologue fusion we check if the underlying template of the choice
+                # supports all allowed prologue inputs. If not, we skip this choice in
+                # the fusion benchmark.
+                # TODO: Remove this check after all Triton templates support prologue fusion.   (4161)
+                # Currently, persistent+TMA Triton template does not due to the TMA-based loads. (4162)
+                if (
+                    not epilogue_fusion
+                    and hasattr(choice, "allowed_prologue_inps")
+                    and choice.allowed_prologue_inps != multi_node.allowed_prologue_inps
+                ):
+                    continue                                                   # <== PULA a choice TMA
+
+--------------------------------------------------------------------------------
+PONTO-CHAVE: o comentário admite, palavra por palavra, que o template persistent+TMA
+"does not [support prologue fusion] due to the TMA-based loads". O `continue` remove
+a choice TMA da consideração de fusão de prologue. É o gap, reconhecido na fonte.
+
+Relacionado: scheduler.py:2862-2863
+    def is_prologue_fusion(node1, node2):
+        return node2.is_template() and config.prologue_fusion and not node1.is_template()
+(prologue fusion só ocorre se config.prologue_fusion estiver ligado — off por padrão)

@@ -1,0 +1,6 @@
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 405 (/usr/local/bin/python3)
+==PROF== Profiling "persistent_tma_prologue": 0%....50%....100% - 13 passes
+==PROF== Disconnected from process 405
+==PROF== Report: /out/tma_prototype_ncu/n2048_baseline_fused.ncu-rep

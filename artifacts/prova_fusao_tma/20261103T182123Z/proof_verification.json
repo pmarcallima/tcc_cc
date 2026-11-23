@@ -1,0 +1,314 @@
+{
+  "scope": "ordinary PyTorch expressions, no InvokeQuant/custom_op; forced fixed TMA choices",
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_uuid": "830f44e0-7bab-1343-b221-f284b5d66b49"
+  },
+  "all_passed": true,
+  "expected_shapes_mnk": {
+    "cast_small": [
+      256,
+      256,
+      256
+    ],
+    "cast_persistent": [
+      2048,
+      1024,
+      256
+    ]
+  },
+  "matching_case_counts": {
+    "cast_small": 1,
+    "cast_persistent": 1
+  },
+  "paths": [
+    {
+      "case": "cast_small",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true
+      },
+      "kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "tensor_buffers": [
+        "buf0",
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_small_original_output_code.py",
+      "fusion_log": "cast_small_original_fusion.log",
+      "trace": "cast_small_original_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ptx",
+        "ttir": "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ttir",
+        "ttgir": "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ttgir"
+      }
+    },
+    {
+      "case": "cast_small",
+      "label": "patched_split",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true
+      },
+      "kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "tensor_buffers": [
+        "buf0",
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_small_patched_split_output_code.py",
+      "fusion_log": "cast_small_patched_split_fusion.log",
+      "trace": "cast_small_patched_split_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ptx",
+        "ttir": "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ttir",
+        "ttgir": "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ttgir"
+      }
+    },
+    {
+      "case": "cast_small",
+      "label": "patched_enabled",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true,
+        "cast_feeds_dot": true,
+        "cast_input_loaded_by_descriptor": true,
+        "two_descriptor_loads_one_output_store": true,
+        "generated_int8_cast": true
+      },
+      "kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "tensor_buffers": [
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_small_patched_enabled_output_code.py",
+      "fusion_log": "cast_small_patched_enabled_fusion.log",
+      "trace": "cast_small_patched_enabled_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ptx",
+        "ttir": "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ttir",
+        "ttgir": "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ttgir"
+      }
+    },
+    {
+      "case": "cast_persistent",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true
+      },
+      "kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "tensor_buffers": [
+        "buf0",
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_persistent_original_output_code.py",
+      "fusion_log": "cast_persistent_original_fusion.log",
+      "trace": "cast_persistent_original_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ptx",
+        "ttir": "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ttir",
+        "ttgir": "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ttgir"
+      }
+    },
+    {
+      "case": "cast_persistent",
+      "label": "patched_split",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true
+      },
+      "kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "tensor_buffers": [
+        "buf0",
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_persistent_patched_split_output_code.py",
+      "fusion_log": "cast_persistent_patched_split_fusion.log",
+      "trace": "cast_persistent_patched_split_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ptx",
+        "ttir": "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ttir",
+        "ttgir": "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ttgir"
+      }
+    },
+    {
+      "case": "cast_persistent",
+      "label": "patched_enabled",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "expected_generated_kernels": true,
+        "expected_trace_kernels": true,
+        "kernel_names_and_order": true,
+        "scheduler_decision": true,
+        "three_seeds_correct": true,
+        "five_profile_outputs_correct": true,
+        "no_recompilation": true,
+        "tensor_buffers": true,
+        "extension_marker": true,
+        "no_external_matmul_or_custom_op": true,
+        "unique_matmul_ptx": true,
+        "ptx_tma": true,
+        "ptx_wgmma": true,
+        "ttgir_tma": true,
+        "cast_feeds_dot": true,
+        "cast_input_loaded_by_descriptor": true,
+        "two_descriptor_loads_one_output_store": true,
+        "generated_int8_cast": true
+      },
+      "kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "tensor_buffers": [
+        "buf1"
+      ],
+      "max_abs_error": 0.0,
+      "all_seeds_exact_vs_original": true,
+      "wrapper": "cast_persistent_patched_enabled_output_code.py",
+      "fusion_log": "cast_persistent_patched_enabled_fusion.log",
+      "trace": "cast_persistent_patched_enabled_runtime_trace.json",
+      "ir": {
+        "ptx": "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ptx",
+        "ttir": "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ttir",
+        "ttgir": "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ttgir"
+      }
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_uuid": "830f44e0-7bab-1343-b221-f284b5d66b49"
+  },
+  "proof_trace": true,
+  "scope": "ordinary PyTorch expressions, no InvokeQuant/custom_op; forced fixed TMA choices",
+  "method": {
+    "tile": [
+      64,
+      128,
+      64
+    ],
+    "stages": 3,
+    "warps": 4,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "rounds": 5,
+    "graph_rep_ms": 30,
+    "atol": 0.125,
+    "rtol": 0.01,
+    "scheduler_heuristics": "unchanged"
+  },
+  "cases": [
+    {
+      "name": "cast_small",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "paths": {
+        "original": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0",
+            "triton_tem_fused__to_copy_mm_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "runtime_profile": {
+            "trace_file": "cast_small_original_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused__to_copy_0",
+              "triton_tem_fused__to_copy_mm_1"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_small/original/5Z7NPPI6XMEFXVWIRKMNJQ7X2NS6MJ44ZNH5Y7R7R6SC532Y4XWA/triton_poi_fused__to_copy_0.ptx",
+            "proof_ir/cast_small/original/5Z7NPPI6XMEFXVWIRKMNJQ7X2NS6MJ44ZNH5Y7R7R6SC532Y4XWA/triton_poi_fused__to_copy_0.ttgir",
+            "proof_ir/cast_small/original/5Z7NPPI6XMEFXVWIRKMNJQ7X2NS6MJ44ZNH5Y7R7R6SC532Y4XWA/triton_poi_fused__to_copy_0.ttir",
+            "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ptx",
+            "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ttgir",
+            "proof_ir/cast_small/original/EM5B6UF7WOYBIAOKYGJAAUXOV6C3ER2CF2UPZH225OF5ZBIRUF5Q/triton_tem_fused__to_copy_mm_1.ttir",
+            "proof_ir/cast_small/original/GGW6MIQGBVVOCD5H6QSYTYSWYALEX5TQHW5N4SELQZ4V3YG3OGIQ/triton_mm_persistent_tma.ptx",
+            "proof_ir/cast_small/original/GGW6MIQGBVVOCD5H6QSYTYSWYALEX5TQHW5N4SELQZ4V3YG3OGIQ/triton_mm_persistent_tma.ttgir",
+            "proof_ir/cast_small/original/GGW6MIQGBVVOCD5H6QSYTYSWYALEX5TQHW5N4SELQZ4V3YG3OGIQ/triton_mm_persistent_tma.ttir",
+            "proof_ir/cast_small/original/LVSXU7TBIQXUGSKJFE6PH67ASRGD5ZBRCPXGKD37SE4UATGM46HA/triton_poi_fused__to_copy_0.ptx",
+            "proof_ir/cast_small/original/LVSXU7TBIQXUGSKJFE6PH67ASRGD5ZBRCPXGKD37SE4UATGM46HA/triton_poi_fused__to_copy_0.ttgir",
+            "proof_ir/cast_small/original/LVSXU7TBIQXUGSKJFE6PH67ASRGD5ZBRCPXGKD37SE4UATGM46HA/triton_poi_fused__to_copy_0.ttir"
+          ]
+        },
+        "patched_split": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0",
+            "triton_tem_fused__to_copy_mm_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "runtime_profile": {
+            "trace_file": "cast_small_patched_split_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused__to_copy_0",
+              "triton_tem_fused__to_copy_mm_1"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_small/patched_split/4CPY5NMS375BGNB6KUOSL4PIAOLLNTIRGVLMBR27D2BF2DDQFYDQ/triton_mm_persistent_tma.ptx",
+            "proof_ir/cast_small/patched_split/4CPY5NMS375BGNB6KUOSL4PIAOLLNTIRGVLMBR27D2BF2DDQFYDQ/triton_mm_persistent_tma.ttgir",
+            "proof_ir/cast_small/patched_split/4CPY5NMS375BGNB6KUOSL4PIAOLLNTIRGVLMBR27D2BF2DDQFYDQ/triton_mm_persistent_tma.ttir",
+            "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ptx",
+            "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ttgir",
+            "proof_ir/cast_small/patched_split/NHXDWJXUH3HBCWWL2SNTG4G23EH3W3FFQI6CIAR43HQKXS7HNHWA/triton_tem_fused__to_copy_mm_1.ttir"
+          ]
+        },
+        "patched_enabled": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "tensor_buffers": [
+            "buf1"
+          ],
+          "fused_in_generated_code": true,
+          "runtime_profile": {
+            "trace_file": "cast_small_patched_enabled_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 5,
+            "kernels_per_call": 1.0,
+            "kernel_names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_small/patched_enabled/2ZC5AEPEJE7PXJEEUYEW4SSDV4NYMZIFLNBCAHI53EAKN2MZYIZA/triton_.ptx",
+            "proof_ir/cast_small/patched_enabled/2ZC5AEPEJE7PXJEEUYEW4SSDV4NYMZIFLNBCAHI53EAKN2MZYIZA/triton_.ttgir",
+            "proof_ir/cast_small/patched_enabled/2ZC5AEPEJE7PXJEEUYEW4SSDV4NYMZIFLNBCAHI53EAKN2MZYIZA/triton_.ttir",
+            "proof_ir/cast_small/patched_enabled/7X43IIJ5YWAVCMA3N4J5V5KIGNTLHU5MJ4VSXTAOF26O7PUX65MQ/triton_.ptx",
+            "proof_ir/cast_small/patched_enabled/7X43IIJ5YWAVCMA3N4J5V5KIGNTLHU5MJ4VSXTAOF26O7PUX65MQ/triton_.ttgir",
+            "proof_ir/cast_small/patched_enabled/7X43IIJ5YWAVCMA3N4J5V5KIGNTLHU5MJ4VSXTAOF26O7PUX65MQ/triton_.ttir",
+            "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ptx",
+            "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ttgir",
+            "proof_ir/cast_small/patched_enabled/O67PWUTCZDN7YQVKYQXCIZ4ACJJ5YYDDE5TXSWSLY4TLSMIVJUZQ/triton_tem_fused__to_copy_mm_0.ttir",
+            "proof_ir/cast_small/patched_enabled/VKYVAEIMZEBOYAW67RRPGW2PJ5SEKLXT3QIMDUT74ISSZNRWNH6A/triton_.ptx",
+            "proof_ir/cast_small/patched_enabled/VKYVAEIMZEBOYAW67RRPGW2PJ5SEKLXT3QIMDUT74ISSZNRWNH6A/triton_.ttgir",
+            "proof_ir/cast_small/patched_enabled/VKYVAEIMZEBOYAW67RRPGW2PJ5SEKLXT3QIMDUT74ISSZNRWNH6A/triton_.ttir"
+          ]
+        }
+      }
+    },
+    {
+      "name": "cast_persistent",
+      "shape_mnk": [
+        2048,
+        1024,
+        256
+      ],
+      "paths": {
+        "original": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0",
+            "triton_tem_fused__to_copy_mm_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "runtime_profile": {
+            "trace_file": "cast_persistent_original_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused__to_copy_0",
+              "triton_tem_fused__to_copy_mm_1"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_persistent/original/3LKYFXHIS7VGKRM47OEG2PA4NMLMLVN6YC5ACQT2D7HIEPKJ43NQ/triton_mm_persistent_tma.ptx",
+            "proof_ir/cast_persistent/original/3LKYFXHIS7VGKRM47OEG2PA4NMLMLVN6YC5ACQT2D7HIEPKJ43NQ/triton_mm_persistent_tma.ttgir",
+            "proof_ir/cast_persistent/original/3LKYFXHIS7VGKRM47OEG2PA4NMLMLVN6YC5ACQT2D7HIEPKJ43NQ/triton_mm_persistent_tma.ttir",
+            "proof_ir/cast_persistent/original/D2FAQTSVPUCL2GMRGTXM6OOG6V44XEU43BOF3QJAOJV347TY37UA/triton_poi_fused__to_copy_0.ptx",
+            "proof_ir/cast_persistent/original/D2FAQTSVPUCL2GMRGTXM6OOG6V44XEU43BOF3QJAOJV347TY37UA/triton_poi_fused__to_copy_0.ttgir",
+            "proof_ir/cast_persistent/original/D2FAQTSVPUCL2GMRGTXM6OOG6V44XEU43BOF3QJAOJV347TY37UA/triton_poi_fused__to_copy_0.ttir",
+            "proof_ir/cast_persistent/original/FZSGL5NYITUYCA2GHNRNDHKQJNTWBVVJMOVLGX4SH7JHY2MFW5UA/triton_poi_fused__to_copy_0.ptx",
+            "proof_ir/cast_persistent/original/FZSGL5NYITUYCA2GHNRNDHKQJNTWBVVJMOVLGX4SH7JHY2MFW5UA/triton_poi_fused__to_copy_0.ttgir",
+            "proof_ir/cast_persistent/original/FZSGL5NYITUYCA2GHNRNDHKQJNTWBVVJMOVLGX4SH7JHY2MFW5UA/triton_poi_fused__to_copy_0.ttir",
+            "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ptx",
+            "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ttgir",
+            "proof_ir/cast_persistent/original/NWQ3UB3ZAB7O3WPNMAMWGNHAIZX36I43E6YBL4KLHTGR55OE4ITQ/triton_tem_fused__to_copy_mm_1.ttir"
+          ]
+        },
+        "patched_split": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0",
+            "triton_tem_fused__to_copy_mm_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "runtime_profile": {
+            "trace_file": "cast_persistent_patched_split_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused__to_copy_0",
+              "triton_tem_fused__to_copy_mm_1"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_persistent/patched_split/QM4VQT7VSBHFBFWN46A2TVGWCWHMOSAXUTUNPYLNIGJYHNU7SYAQ/triton_mm_persistent_tma.ptx",
+            "proof_ir/cast_persistent/patched_split/QM4VQT7VSBHFBFWN46A2TVGWCWHMOSAXUTUNPYLNIGJYHNU7SYAQ/triton_mm_persistent_tma.ttgir",
+            "proof_ir/cast_persistent/patched_split/QM4VQT7VSBHFBFWN46A2TVGWCWHMOSAXUTUNPYLNIGJYHNU7SYAQ/triton_mm_persistent_tma.ttir",
+            "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ptx",
+            "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ttgir",
+            "proof_ir/cast_persistent/patched_split/SKJMLTEJ44V7C5ZQJJOUO54KYLFVQ3GZAM7OXMVRE2MQQSNXCDDA/triton_tem_fused__to_copy_mm_1.ttir"
+          ]
+        },
+        "patched_enabled": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "tensor_buffers": [
+            "buf1"
+          ],
+          "fused_in_generated_code": true,
+          "runtime_profile": {
+            "trace_file": "cast_persistent_patched_enabled_runtime_trace.json",
+            "calls": 5,
+            "gpu_events": 5,
+            "kernels_per_call": 1.0,
+            "kernel_names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ],
+            "recompile_guard": "fail_on_recompile",
+            "all_outputs_correct": true
+          },
+          "ir_files": [
+            "proof_ir/cast_persistent/patched_enabled/B3CS4HBRKEHHZOQ2BNJNMMBKCCLK2YVSIVW6QUXSSHWTMBYPQNHQ/triton_.ptx",
+            "proof_ir/cast_persistent/patched_enabled/B3CS4HBRKEHHZOQ2BNJNMMBKCCLK2YVSIVW6QUXSSHWTMBYPQNHQ/triton_.ttgir",
+            "proof_ir/cast_persistent/patched_enabled/B3CS4HBRKEHHZOQ2BNJNMMBKCCLK2YVSIVW6QUXSSHWTMBYPQNHQ/triton_.ttir",
+            "proof_ir/cast_persistent/patched_enabled/LMBBBGPPTTWDORLFQQAYCBGL6WPSBZ27WQTSWIQBCJNXRQD2LBVA/triton_.ptx",
+            "proof_ir/cast_persistent/patched_enabled/LMBBBGPPTTWDORLFQQAYCBGL6WPSBZ27WQTSWIQBCJNXRQD2LBVA/triton_.ttgir",
+            "proof_ir/cast_persistent/patched_enabled/LMBBBGPPTTWDORLFQQAYCBGL6WPSBZ27WQTSWIQBCJNXRQD2LBVA/triton_.ttir",
+            "proof_ir/cast_persistent/patched_enabled/LUGEJRZUY2K6Q6MMJXEUFR4DFUOO257TUVG2M7AUGOYPDD5LB5PA/triton_.ptx",
+            "proof_ir/cast_persistent/patched_enabled/LUGEJRZUY2K6Q6MMJXEUFR4DFUOO257TUVG2M7AUGOYPDD5LB5PA/triton_.ttgir",
+            "proof_ir/cast_persistent/patched_enabled/LUGEJRZUY2K6Q6MMJXEUFR4DFUOO257TUVG2M7AUGOYPDD5LB5PA/triton_.ttir",
+            "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ptx",
+            "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ttgir",
+            "proof_ir/cast_persistent/patched_enabled/WX47IWIYNJ6HNQZTJ6Q5IW4IKDMMV74VN67K72IAFSOLP3DV2GCA/triton_tem_fused__to_copy_mm_0.ttir"
+          ]
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 20.364555777,
+  "suite": "cast"
+}

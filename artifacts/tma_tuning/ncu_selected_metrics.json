@@ -1,0 +1,6062 @@
+{
+  "n2048_baseline_fused": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 588.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 148.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 4098.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 4.104
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Gbyte/s",
+      "value": 5.592369
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Gbyte/s",
+      "value": 6.185224
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "Gbyte/s",
+      "value": 4.953174
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 223.694762
+    },
+    "dram__bytes_read.avg": {
+      "unit": "Kbyte",
+      "value": 302.528
+    },
+    "dram__bytes_read.max": {
+      "unit": "Kbyte",
+      "value": 333.056
+    },
+    "dram__bytes_read.min": {
+      "unit": "Kbyte",
+      "value": 268.8
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Mbyte",
+      "value": 12.10112
+    },
+    "dram__bytes_write.avg": {
+      "unit": "Kbyte",
+      "value": 213.4016
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 237.568
+    },
+    "dram__bytes_write.min": {
+      "unit": "Kbyte",
+      "value": 188.16
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Mbyte",
+      "value": 8.536064
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 6.675113
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 7.38275
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 5.912162
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 6.675113
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 92.256
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 92.256
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 92.256
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 92.256
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 2.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 392.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 101.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2732.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 2736.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 230.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 232.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 66.6
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 66.688
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 65.576
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.5
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 83333.425
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 86078.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 80668.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 6666674.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 4925.425
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 5216.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 4720.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 394034.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.418841
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.281236
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.46318
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.321274
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.73159
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.660637
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.418841
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.281236
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.70942
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.640618
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.73159
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.660637
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.365795
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.330319
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.70942
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.640618
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.701455
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 23.410875
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 21.140389
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 11.705438
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.570194
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.701455
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.701455
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 23.410875
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 21.140389
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 11.705438
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.570194
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.701455
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 21.140389
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.570194
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 21.140389
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.570194
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.499771
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.250511
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.000327
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.63298
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.245107
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.097781
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 1.98258
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.250511
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 528.04321
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n2048_baseline_matmul": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 720.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 332.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 4098.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 5.022
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Gbyte/s",
+      "value": 1.782368
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Gbyte/s",
+      "value": 2.257895
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "Gbyte/s",
+      "value": 1.342105
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 71.294737
+    },
+    "dram__bytes_read.avg": {
+      "unit": "Kbyte",
+      "value": 26.7584
+    },
+    "dram__bytes_read.max": {
+      "unit": "Kbyte",
+      "value": 37.888
+    },
+    "dram__bytes_read.min": {
+      "unit": "Kbyte",
+      "value": 18.944
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Mbyte",
+      "value": 1.070336
+    },
+    "dram__bytes_write.avg": {
+      "unit": "Kbyte",
+      "value": 59.936
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 71.936
+    },
+    "dram__bytes_write.min": {
+      "unit": "Kbyte",
+      "value": 46.336
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Mbyte",
+      "value": 2.39744
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.127519
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.69513
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.602
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.127519
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 48.64
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 48.64
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 48.64
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 48.64
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 480.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 221.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2732.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 3348.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 155.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 160.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 66.576
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 66.688
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 65.552
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.33
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 77107.625
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 81392.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 73540.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 6168610.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 4926.6125
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 5201.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 4720.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 394129.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.122072
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.27022
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.219637
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.341165
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.609819
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.170582
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.122072
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.27022
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.561036
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.13511
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.609819
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.170582
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.804909
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.585291
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.561036
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.13511
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 49.953159
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 51.514195
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.458632
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 25.757098
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.729316
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 49.953159
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 49.953159
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 51.514195
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.458632
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 25.757098
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.729316
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 49.953159
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.458632
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.729316
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.458632
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.729316
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.323522
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.949831
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.447892
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 7.960663
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 5.094824
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.46842
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 2.219789
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.949831
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 587.121751
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n2048_baseline_pointwise": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 1399.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 5706.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 8956.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 1.591
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Gbyte/s",
+      "value": 35.767179
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Gbyte/s",
+      "value": 38.010256
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "Gbyte/s",
+      "value": 32.758974
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Tbyte/s",
+      "value": 1.430687
+    },
+    "dram__bytes_read.avg": {
+      "unit": "Kbyte",
+      "value": 268.1088
+    },
+    "dram__bytes_read.max": {
+      "unit": "Kbyte",
+      "value": 284.16
+    },
+    "dram__bytes_read.min": {
+      "unit": "Kbyte",
+      "value": 244.48
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Mbyte",
+      "value": 10.724352
+    },
+    "dram__bytes_write.avg": {
+      "unit": "Kbyte",
+      "value": 178.2656
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 190.208
+    },
+    "dram__bytes_write.min": {
+      "unit": "Kbyte",
+      "value": 164.352
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Mbyte",
+      "value": 7.130624
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 42.845734
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 45.53273
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 39.242186
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 42.845734
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 12.48
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 12.48
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 12.48
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 12.48
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 908.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 3670.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 5792.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 1036.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 16.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 16.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 32.768
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 7.76
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 6931.25
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 7324.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 6608.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 554500.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 4928.875
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 5185.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 4680.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 394310.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.415203
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.067788
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.179336
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.889823
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.447367
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.092056
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.200778
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.906002
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.447367
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.092056
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.200778
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.906002
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.330733
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.004054
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.064714
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.422605
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 21.905827
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.217106
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 20.422605
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 25.737341
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 16.471898
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 27.779389
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 17.778809
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 23.415009
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 14.985606
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 25.737341
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 2174.290587
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n2048_selected_fused": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 390.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 105.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 1542.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 4.104
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Gbyte/s",
+      "value": 9.976541
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Gbyte/s",
+      "value": 10.777999
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "Gbyte/s",
+      "value": 9.399602
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 399.06163
+    },
+    "dram__bytes_read.avg": {
+      "unit": "Kbyte",
+      "value": 289.9328
+    },
+    "dram__bytes_read.max": {
+      "unit": "Kbyte",
+      "value": 306.432
+    },
+    "dram__bytes_read.min": {
+      "unit": "Kbyte",
+      "value": 279.808
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Mbyte",
+      "value": 11.597312
+    },
+    "dram__bytes_write.avg": {
+      "unit": "Kbyte",
+      "value": 191.8144
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 214.016
+    },
+    "dram__bytes_write.min": {
+      "unit": "Kbyte",
+      "value": 174.08
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Mbyte",
+      "value": 7.672576
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 11.912698
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 12.869695
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 11.223792
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 11.912698
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 48.288
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 48.288
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 48.288
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 48.288
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 2.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 1.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 260.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 73.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 1028.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 2736.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 193.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 200.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 132.16
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 132.224
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 131.136
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 1.0
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 109478.675
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 118690.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 102468.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 8758294.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 4927.3
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 5312.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 4800.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 394184.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.301025
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.151083
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.341682
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.187054
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.670841
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.593527
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.301025
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.151083
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.650512
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.575541
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.670841
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.593527
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.33542
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.296763
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.650512
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.575541
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 41.632792
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 42.933817
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.985725
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 21.466909
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.992862
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 41.632792
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 41.632792
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 42.933817
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.985725
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 21.466909
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.992862
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 41.632792
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.985725
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.992862
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 37.985725
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 18.992862
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 36.834642
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.259965
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.006378
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.755414
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.323465
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.15988
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 2.022323
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.259965
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 528.841853
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n2048_selected_matmul": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 390.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 233.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 1542.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 5.022
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Gbyte/s",
+      "value": 2.960359
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Gbyte/s",
+      "value": 3.928287
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "Gbyte/s",
+      "value": 2.079681
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 118.414343
+    },
+    "dram__bytes_read.avg": {
+      "unit": "Kbyte",
+      "value": 28.0832
+    },
+    "dram__bytes_read.max": {
+      "unit": "Kbyte",
+      "value": 37.376
+    },
+    "dram__bytes_read.min": {
+      "unit": "Kbyte",
+      "value": 18.688
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Mbyte",
+      "value": 1.123328
+    },
+    "dram__bytes_write.avg": {
+      "unit": "Kbyte",
+      "value": 67.0272
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 88.832
+    },
+    "dram__bytes_write.min": {
+      "unit": "Kbyte",
+      "value": 48.128
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Mbyte",
+      "value": 2.681088
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 3.538873
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 4.695954
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.486093
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 3.538873
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 32.128
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 32.128
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 32.128
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 32.128
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 1.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 260.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 157.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 1028.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 3348.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 158.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 160.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 197.656
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 197.76
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 196.632
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 1.0
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 70460.45
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 73998.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 67092.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 5636836.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 4926.1375
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 5304.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 4720.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 394091.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 4.257332
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 3.534122
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 4.390373
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 3.644563
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.195187
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.822282
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 4.257332
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 3.534122
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.128666
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.767061
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.195187
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.822282
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.097593
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.911141
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.128666
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.767061
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 68.117305
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 70.245971
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 58.313014
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.122986
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 29.156507
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 68.117305
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 68.117305
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 70.245971
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 58.313014
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.122986
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 29.156507
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 68.117305
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 58.313014
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 29.156507
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 58.313014
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 29.156507
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 56.545953
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.279237
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.018712
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.800938
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 4.352601
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 3.163955
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 2.024931
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.279237
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 530.469971
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n256_baseline_fused": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 588.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 148.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 4098.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 4.104
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Mbyte/s",
+      "value": 48.214286
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Mbyte/s",
+      "value": 178.571429
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "byte/s",
+      "value": 0.0
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 1.928571
+    },
+    "dram__bytes_read.avg": {
+      "unit": "byte",
+      "value": 6.4
+    },
+    "dram__bytes_read.max": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_read.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.sum": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_write.avg": {
+      "unit": "byte",
+      "value": 339.2
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 1.024
+    },
+    "dram__bytes_write.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Kbyte",
+      "value": 13.568
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.057712
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.213748
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.057712
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 7.168
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 7.168
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 7.168
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 7.168
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 2.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 392.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 101.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2732.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 2736.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 231.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 232.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 66.6
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 66.688
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 65.576
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.02
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 158.75
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 384.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 0.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 12700.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 81.6875
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 287.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 32.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 6535.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.432208
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.027456
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 47.26286
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.906046
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.432208
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.027456
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.716104
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.013728
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 23.63143
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.453023
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.716104
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.013728
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.915326
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 756.205768
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 14.496736
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.915326
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.915326
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 756.205768
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 14.496736
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 22.915326
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 14.496736
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.439295
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.515228
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 17.002519
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.515228
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.241084
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 3.994294
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 207.628885
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 132.882486
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 0.0
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.241084
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 527.246748
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n256_baseline_matmul": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 720.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 332.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 4098.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 5.022
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Mbyte/s",
+      "value": 30.120482
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Mbyte/s",
+      "value": 240.963855
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "byte/s",
+      "value": 0.0
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 1.204819
+    },
+    "dram__bytes_read.avg": {
+      "unit": "byte",
+      "value": 6.4
+    },
+    "dram__bytes_read.max": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_read.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.sum": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_write.avg": {
+      "unit": "byte",
+      "value": 153.6
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 1.024
+    },
+    "dram__bytes_write.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Kbyte",
+      "value": 6.144
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.036236
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.289889
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.036236
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 5.312
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 5.312
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 5.312
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 5.312
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 480.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 221.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2732.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 3348.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 157.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 160.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 66.576
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 66.688
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 65.552
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.01
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 129.8
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 332.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 0.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 10384.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 77.8875
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 154.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 32.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 6231.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.224539
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.037235
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 73.409802
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.228759
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 2.224539
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.037235
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.11227
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.018618
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 36.704901
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.614379
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.11227
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.018618
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.592631
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1174.55683
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 19.660142
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.592631
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.592631
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1174.55683
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 19.660142
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 35.592631
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 19.660142
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 19.660142
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.595762
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.228955
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 3.986531
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 206.680136
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 132.275287
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 0.0
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.228955
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 526.222106
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n256_baseline_pointwise": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 1399.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 5706.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 8956.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 1.591
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Mbyte/s",
+      "value": 116.455696
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Mbyte/s",
+      "value": 506.329114
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "byte/s",
+      "value": 0.0
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 4.658228
+    },
+    "dram__bytes_read.avg": {
+      "unit": "byte",
+      "value": 51.2
+    },
+    "dram__bytes_read.max": {
+      "unit": "byte",
+      "value": 512.0
+    },
+    "dram__bytes_read.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.sum": {
+      "unit": "Kbyte",
+      "value": 2.048
+    },
+    "dram__bytes_write.avg": {
+      "unit": "byte",
+      "value": 243.2
+    },
+    "dram__bytes_write.max": {
+      "unit": "byte",
+      "value": 768.0
+    },
+    "dram__bytes_write.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Kbyte",
+      "value": 9.728
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.140381
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.610352
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.140381
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 2.528
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 2.528
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 2.528
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 2.528
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 908.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 3670.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 5792.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 1036.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 16.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 16.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 32.768
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.12
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 105.475
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 256.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 0.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 8438.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 76.025
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 128.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 32.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 6082.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.600655
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.080204
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.300328
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.040102
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.600655
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.080204
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.300328
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.040102
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.600655
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.080204
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.300328
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.040102
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.582454
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.077774
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.496051
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.807145
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 1.122858
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 2.496051
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 11.108887
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 7.109688
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 13.003248
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 8.322079
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 5.884545
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 3.766108
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 11.108887
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 938.478795
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n256_selected_fused": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 588.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 527.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 3084.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 5.827
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Mbyte/s",
+      "value": 67.080745
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Mbyte/s",
+      "value": 248.447205
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "byte/s",
+      "value": 0.0
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 2.68323
+    },
+    "dram__bytes_read.avg": {
+      "unit": "byte",
+      "value": 6.4
+    },
+    "dram__bytes_read.max": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_read.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.sum": {
+      "unit": "byte",
+      "value": 256.0
+    },
+    "dram__bytes_write.avg": {
+      "unit": "byte",
+      "value": 339.2
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 1.024
+    },
+    "dram__bytes_write.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Kbyte",
+      "value": 13.568
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.080742
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.299043
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.022928
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.080742
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 5.152
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 5.152
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 5.152
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 5.152
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 4.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 2.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 392.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 346.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2056.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 3808.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 120.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 120.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 83.008
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 83.072
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 81.984
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.03
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 173.925
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 400.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 0.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 13914.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 77.7625
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 159.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 32.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 6221.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.192473
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.03836
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 19.675797
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.632946
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.192473
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.03836
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.596236
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.01918
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 9.837898
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.316473
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.596236
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.01918
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 19.07956
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 314.812745
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.127129
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 19.07956
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 19.07956
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 314.812745
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.127129
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 19.07956
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 10.127129
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.613765
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.981185
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 16.18956
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.981185
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.236899
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 3.991615
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 103.778298
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 66.418111
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 0.0
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.236899
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 526.893236
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  },
+  "n256_selected_matmul": {
+    "derived__local_spilling_requests": {
+      "unit": "",
+      "value": 0.0
+    },
+    "derived__local_spilling_requests_pct": {
+      "unit": "%",
+      "value": "no data"
+    },
+    "derived__pct_occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 720.0
+    },
+    "derived__pct_occupancy_per_block_size": {
+      "unit": "%",
+      "value": 882.0
+    },
+    "derived__pct_occupancy_per_register_count": {
+      "unit": "%/register",
+      "value": 4098.0
+    },
+    "derived__pct_occupancy_per_shared_mem_size": {
+      "unit": "%/Kbyte",
+      "value": 6.379
+    },
+    "device__attribute_max_registers_per_block": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "unit": "",
+      "value": 65536.0
+    },
+    "device__attribute_max_registers_per_thread": {
+      "unit": "",
+      "value": 255.0
+    },
+    "device__attribute_max_shared_memory_per_block": {
+      "unit": "",
+      "value": 49152.0
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "unit": "",
+      "value": 232448.0
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "unit": "",
+      "value": 233472.0
+    },
+    "device__attribute_reserved_shared_memory_per_block": {
+      "unit": "",
+      "value": 1024.0
+    },
+    "dram__bytes.avg.per_second": {
+      "unit": "Mbyte/s",
+      "value": 50.0
+    },
+    "dram__bytes.max.per_second": {
+      "unit": "Mbyte/s",
+      "value": 258.064516
+    },
+    "dram__bytes.min.per_second": {
+      "unit": "byte/s",
+      "value": 0.0
+    },
+    "dram__bytes.sum.per_second": {
+      "unit": "Gbyte/s",
+      "value": 2.0
+    },
+    "dram__bytes_read.avg": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.max": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_read.sum": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.avg": {
+      "unit": "byte",
+      "value": 198.4
+    },
+    "dram__bytes_write.max": {
+      "unit": "Kbyte",
+      "value": 1.024
+    },
+    "dram__bytes_write.min": {
+      "unit": "byte",
+      "value": 0.0
+    },
+    "dram__bytes_write.sum": {
+      "unit": "Kbyte",
+      "value": 7.936
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.060434
+    },
+    "gpu__dram_throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.311915
+    },
+    "gpu__dram_throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "gpu__dram_throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.060434
+    },
+    "gpu__time_duration.avg": {
+      "unit": "us",
+      "value": 3.968
+    },
+    "gpu__time_duration.max": {
+      "unit": "us",
+      "value": 3.968
+    },
+    "gpu__time_duration.min": {
+      "unit": "us",
+      "value": 3.968
+    },
+    "gpu__time_duration.sum": {
+      "unit": "us",
+      "value": 3.968
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_cluster_pct": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "launch__occupancy_limit_barriers": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_blocks": {
+      "unit": "block",
+      "value": 32.0
+    },
+    "launch__occupancy_limit_registers": {
+      "unit": "block",
+      "value": 5.0
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "unit": "block",
+      "value": 3.0
+    },
+    "launch__occupancy_limit_warps": {
+      "unit": "block",
+      "value": 16.0
+    },
+    "launch__occupancy_per_barrier_count": {
+      "unit": "",
+      "value": 480.0
+    },
+    "launch__occupancy_per_block_size": {
+      "unit": "",
+      "value": 575.0
+    },
+    "launch__occupancy_per_cluster_size": {
+      "unit": "",
+      "value": 0.0
+    },
+    "launch__occupancy_per_register_count": {
+      "unit": "",
+      "value": 2732.0
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "unit": "",
+      "value": 4176.0
+    },
+    "launch__registers_per_thread": {
+      "unit": "register/thread",
+      "value": 90.0
+    },
+    "launch__registers_per_thread_allocated": {
+      "unit": "register/thread",
+      "value": 96.0
+    },
+    "launch__shared_mem_config_size": {
+      "unit": "Kbyte",
+      "value": 233.472
+    },
+    "launch__shared_mem_per_block": {
+      "unit": "Kbyte/block",
+      "value": 74.776
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "unit": "Kbyte/block",
+      "value": 74.88
+    },
+    "launch__shared_mem_per_block_driver": {
+      "unit": "Kbyte/block",
+      "value": 1.024
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "unit": "Kbyte/block",
+      "value": 73.752
+    },
+    "launch__shared_mem_per_block_static": {
+      "unit": "byte/block",
+      "value": 0.0
+    },
+    "launch__waves_per_multiprocessor": {
+      "unit": "",
+      "value": 0.02
+    },
+    "lts__t_sectors_op_read.avg": {
+      "unit": "sector",
+      "value": 112.375
+    },
+    "lts__t_sectors_op_read.max": {
+      "unit": "sector",
+      "value": 272.0
+    },
+    "lts__t_sectors_op_read.min": {
+      "unit": "sector",
+      "value": 0.0
+    },
+    "lts__t_sectors_op_read.sum": {
+      "unit": "sector",
+      "value": 8990.0
+    },
+    "lts__t_sectors_op_write.avg": {
+      "unit": "sector",
+      "value": 78.2875
+    },
+    "lts__t_sectors_op_write.max": {
+      "unit": "sector",
+      "value": 169.0
+    },
+    "lts__t_sectors_op_write.min": {
+      "unit": "sector",
+      "value": 32.0
+    },
+    "lts__t_sectors_op_write.sum": {
+      "unit": "sector",
+      "value": 6263.0
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_mem_local": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_mem_shared": {
+      "unit": "byte",
+      "value": "no data"
+    },
+    "sass__inst_executed_register_spilling_op_read": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sass__inst_executed_register_spilling_op_write": {
+      "unit": "inst",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_dmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.967339
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.049946
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 32.461095
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.824108
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 1.967339
+    },
+    "sm__inst_executed_pipe_tensor_op_gmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.049946
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.98367
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.024973
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 16.230548
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.412054
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.98367
+    },
+    "sm__inst_executed_pipe_tensor_op_hmma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.024973
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__inst_executed_pipe_tensor_op_imma.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 31.477426
+    },
+    "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 519.377522
+    },
+    "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 13.185733
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 31.477426
+    },
+    "sm__pipe_tensor_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_dmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 31.477426
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 519.377522
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 13.185733
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 31.477426
+    },
+    "sm__pipe_tensor_op_hmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_op_imma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 13.185733
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__pipe_tensor_type_hmma_hgmma_qgmma_imma_igmma_bmma_bgmma_cycles_active.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 13.185733
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "unit": "%",
+      "value": 0.799135
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.227786
+    },
+    "sm__warps_active.avg.per_cycle_active": {
+      "unit": "warp",
+      "value": 3.985783
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 104.325648
+    },
+    "sm__warps_active.max.per_cycle_active": {
+      "unit": "warp",
+      "value": 66.768415
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 0.0
+    },
+    "sm__warps_active.min.per_cycle_active": {
+      "unit": "warp",
+      "value": 0.0
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "unit": "%",
+      "value": 6.227786
+    },
+    "sm__warps_active.sum.per_cycle_active": {
+      "unit": "warp",
+      "value": 526.123343
+    },
+    "smsp__warps_active.avg.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.max.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.min.peak_sustained": {
+      "unit": "warp",
+      "value": 16.0
+    },
+    "smsp__warps_active.sum.peak_sustained": {
+      "unit": "warp",
+      "value": 8448.0
+    }
+  }
+}

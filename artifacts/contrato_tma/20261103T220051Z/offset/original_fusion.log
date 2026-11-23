@@ -1,0 +1,10 @@
+===== attempting fusion (1/10): 1 nodes =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0')
+found 0 possible fusions
+completed fusion round (1/10): fused 1 nodes into 1 nodes
+
+===== fusion complete (1 iterations) =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0')
+found 0 possible fusions

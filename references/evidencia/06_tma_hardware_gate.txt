@@ -1,0 +1,46 @@
+FONTE: torch/utils/_triton.py  (has_triton_tma_device)
+   +  torch/_inductor/utils.py  (use_triton_tma_template -> can_use_tma)
+================================================================================
+TMA é unidade de hardware. Só existe em compute capability >= 9.0 (Hopper H100,
+Blackwell B200). Por isso o gap só pode ser EXECUTADO em H100+; GPUs menores nem
+selecionam o template TMA.
+--------------------------------------------------------------------------------
+
+@functools.cache
+def has_triton_tma_device() -> bool:
+    if has_triton_package():
+        import torch
+        if (
+            torch.cuda.is_available()
+            and torch.cuda.get_device_capability() >= (9, 0)      # <== GATE: Hopper+
+            and not torch.version.hip
+        ) or torch.xpu.is_available():
+            try:
+                from triton.language.extra.cuda import (
+                    experimental_device_tensormap_create1d,
+                    experimental_device_tensormap_create2d,
+                )
+                return True
+            except ImportError:
+                pass
+            try:
+                from triton.language import make_tensor_descriptor
+                return True
+            except ImportError:
+                pass
+    return False
+
+--------------------------------------------------------------------------------
+Tabela de compute capability (CC):
+
+  GPU         Arquitetura   CC      TMA?
+  GTX 1060    Pascal        6.1     NAO
+  T4          Turing        7.5     NAO   (Colab grátis)
+  V100        Volta         7.0     NAO
+  A100        Ampere        8.0     NAO   (Colab Pro+ — ainda não tem TMA)
+  H100        Hopper        9.0     SIM   <== mínimo para reproduzir o gap
+  B200        Blackwell     10.0    SIM
+
+PONTO-CHAVE: não é flag de software. Sem CC>=9.0, use_triton_tma_template retorna
+False → Inductor escolhe o template padrão (que funde) → o gap não aparece. Para
+EXECUTAR o gap é obrigatório H100+. T4/A100 só mostram o contraste (padrão funde).

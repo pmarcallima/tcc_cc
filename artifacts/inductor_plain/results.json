@@ -1,0 +1,504 @@
+{
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "scope": "ordinary PyTorch expressions, no InvokeQuant/custom_op; forced fixed TMA choices",
+  "method": {
+    "tile": [
+      64,
+      128,
+      64
+    ],
+    "stages": 3,
+    "warps": 4,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "rounds": 5,
+    "graph_rep_ms": 30,
+    "atol": 0.125,
+    "rtol": 0.01,
+    "scheduler_heuristics": "unchanged"
+  },
+  "cases": [
+    {
+      "name": "relu_small",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "paths": {
+        "original": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        },
+        "patched_split": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        },
+        "patched_enabled": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          6.563295490706144,
+          6.441341402802959,
+          6.452189108550737,
+          7.448765357829029,
+          7.452419996261597
+        ],
+        "patched_split": [
+          6.431775483471608,
+          7.385509480160289,
+          6.34956192903492,
+          7.380443422690682,
+          6.3801978864977436
+        ],
+        "patched_enabled": [
+          6.511319825749197,
+          6.396639908061308,
+          7.387309928438556,
+          7.3807819505755825,
+          7.3871866906253745
+        ]
+      },
+      "graph_medians_us": {
+        "original": 6.563295490706144,
+        "patched_split": 6.431775483471608,
+        "patched_enabled": 7.3807819505755825
+      }
+    },
+    {
+      "name": "relu_persistent",
+      "shape_mnk": [
+        2048,
+        1024,
+        256
+      ],
+      "paths": {
+        "original": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        },
+        "patched_split": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        },
+        "patched_enabled": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_relu_0",
+            "triton_tem_fused_mm_relu_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_relu_0",
+              "triton_tem_fused_mm_relu_1"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          10.664713965176759,
+          10.606521518924568,
+          10.372407304728691,
+          10.523242335165701,
+          10.485007439978872
+        ],
+        "patched_split": [
+          10.726705736188746,
+          9.755467388727894,
+          9.643688864178127,
+          9.649514300482615,
+          9.621231987497573
+        ],
+        "patched_enabled": [
+          9.727512077152554,
+          9.68007802317136,
+          10.753010588082654,
+          9.611730242884436,
+          9.63389231324565
+        ]
+      },
+      "graph_medians_us": {
+        "original": 10.523242335165701,
+        "patched_split": 9.649514300482615,
+        "patched_enabled": 9.68007802317136
+      }
+    },
+    {
+      "name": "affine_unmarked",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "paths": {
+        "original": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_add_mm_mul_sub_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_add_mm_mul_sub_1"
+            ]
+          }
+        },
+        "patched_split": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_add_mm_mul_sub_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_add_mm_mul_sub_1"
+            ]
+          }
+        },
+        "patched_enabled": {
+          "status": "executed",
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_add_mm_mul_sub_1"
+          ],
+          "tensor_buffers": [
+            "buf0",
+            "buf1"
+          ],
+          "fused_in_generated_code": false,
+          "profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_add_mm_mul_sub_1"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          7.621505979507688,
+          7.556335825315664,
+          7.402889621791555,
+          7.395978360562711,
+          7.390753543654154
+        ],
+        "patched_split": [
+          7.606587049477699,
+          7.389032112733099,
+          7.386393443115401,
+          7.2588131322965515,
+          7.354620228643003
+        ],
+        "patched_enabled": [
+          7.577738294683891,
+          7.523991016859419,
+          7.384125115214915,
+          7.276372739752252,
+          7.283687454530562
+        ]
+      },
+      "graph_medians_us": {
+        "original": 7.402889621791555,
+        "patched_split": 7.386393443115401,
+        "patched_enabled": 7.384125115214915
+      }
+    }
+  ],
+  "elapsed_seconds": 32.303544007
+}

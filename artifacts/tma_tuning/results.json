@@ -1,0 +1,1797 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "cuda": "13.0",
+    "sms": 132,
+    "allow_tf32_reference": false
+  },
+  "method": {
+    "configs": [
+      {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      {
+        "bm": 64,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 64,
+        "bn": 128,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 64,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 64,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      {
+        "bm": 64,
+        "bn": 256,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 64,
+        "bn": 256,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 256,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 256,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 128,
+        "bk": 128,
+        "stages": 2,
+        "warps": 4
+      },
+      {
+        "bm": 128,
+        "bn": 128,
+        "bk": 128,
+        "stages": 3,
+        "warps": 4
+      }
+    ],
+    "baseline": {
+      "bm": 128,
+      "bn": 128,
+      "bk": 64,
+      "stages": 2,
+      "warps": 4
+    },
+    "discovery_repeats": 3,
+    "discovery_rep_ms": 15,
+    "holdout_repeats": 7,
+    "holdout_rep_ms": 40,
+    "holdout_seed": 99,
+    "clock_control": "unmodified",
+    "reference_prologue": "fp32 arithmetic, then fp16; no FMA",
+    "benchmark": "triton.testing.do_bench_cudagraph"
+  },
+  "shapes": [
+    {
+      "size": 256,
+      "search": [
+        {
+          "id": 9,
+          "config": {
+            "bm": 128,
+            "bn": 256,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 384,
+              "shared_bytes": 163904
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 255,
+              "spills": 256,
+              "shared_bytes": 147480
+            }
+          },
+          "grid": [
+            2
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                37.46661197526653,
+                36.20600953118961,
+                36.20917254155225
+              ],
+              "median_us": 36.20917254155225,
+              "min_us": 36.20600953118961,
+              "max_us": 37.46661197526653
+            },
+            "split": {
+              "samples_us": [
+                23.04986688825819,
+                23.045204759954096,
+                23.050162780224976
+              ],
+              "median_us": 23.04986688825819,
+              "min_us": 23.045204759954096,
+              "max_us": 23.050162780224976
+            }
+          }
+        },
+        {
+          "id": 0,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 231,
+              "spills": 0,
+              "shared_bytes": 65576
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 157,
+              "spills": 0,
+              "shared_bytes": 65552
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.928137404787028,
+                5.922306552151133,
+                5.827372665885541
+              ],
+              "median_us": 5.922306552151133,
+              "min_us": 5.827372665885541,
+              "max_us": 5.928137404787028
+            },
+            "split": {
+              "samples_us": [
+                5.594643860927468,
+                5.509535149411039,
+                5.4912751269452444
+              ],
+              "median_us": 5.509535149411039,
+              "min_us": 5.4912751269452444,
+              "max_us": 5.594643860927468
+            }
+          }
+        },
+        {
+          "id": 10,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 128,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 2,
+              "shared_bytes": 131112
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 156,
+              "spills": 0,
+              "shared_bytes": 131088
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.7492344584686075,
+                5.746172972627589,
+                5.60225146157401
+              ],
+              "median_us": 5.746172972627589,
+              "min_us": 5.60225146157401,
+              "max_us": 5.7492344584686075
+            },
+            "split": {
+              "samples_us": [
+                5.595927286629725,
+                5.555641914599508,
+                5.492596698729373
+              ],
+              "median_us": 5.555641914599508,
+              "min_us": 5.492596698729373,
+              "max_us": 5.595927286629725
+            }
+          }
+        },
+        {
+          "id": 3,
+          "config": {
+            "bm": 64,
+            "bn": 128,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 120,
+              "spills": 0,
+              "shared_bytes": 81984
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 90,
+              "spills": 0,
+              "shared_bytes": 73752
+            }
+          },
+          "grid": [
+            8
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                3.9460173817382604,
+                3.941243052094301,
+                3.9419387015828327
+              ],
+              "median_us": 3.9419387015828327,
+              "min_us": 3.941243052094301,
+              "max_us": 3.9460173817382604
+            },
+            "split": {
+              "samples_us": [
+                4.188573585366303,
+                4.19107717137004,
+                4.182521342101255
+              ],
+              "median_us": 4.188573585366303,
+              "min_us": 4.182521342101255,
+              "max_us": 4.19107717137004
+            }
+          }
+        },
+        {
+          "id": 11,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 128,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 0,
+              "shared_bytes": 229440
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 156,
+              "spills": 0,
+              "shared_bytes": 196632
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.4743146498998,
+                5.444896136914041,
+                5.371930250307409
+              ],
+              "median_us": 5.444896136914041,
+              "min_us": 5.371930250307409,
+              "max_us": 5.4743146498998
+            },
+            "split": {
+              "samples_us": [
+                5.371595903770212,
+                5.365220998462878,
+                5.291447381383366
+              ],
+              "median_us": 5.365220998462878,
+              "min_us": 5.291447381383366,
+              "max_us": 5.371595903770212
+            }
+          }
+        },
+        {
+          "id": 2,
+          "config": {
+            "bm": 64,
+            "bn": 128,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 121,
+              "spills": 0,
+              "shared_bytes": 49192
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 90,
+              "spills": 0,
+              "shared_bytes": 49168
+            }
+          },
+          "grid": [
+            8
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                4.441384284683828,
+                4.443316756399916,
+                4.462136724327183
+              ],
+              "median_us": 4.443316756399916,
+              "min_us": 4.441384284683828,
+              "max_us": 4.462136724327183
+            },
+            "split": {
+              "samples_us": [
+                4.720377432994353,
+                4.702822667247845,
+                4.696599086878989
+              ],
+              "median_us": 4.702822667247845,
+              "min_us": 4.696599086878989,
+              "max_us": 4.720377432994353
+            }
+          }
+        },
+        {
+          "id": 4,
+          "config": {
+            "bm": 128,
+            "bn": 64,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 136,
+              "spills": 0,
+              "shared_bytes": 49192
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 90,
+              "spills": 0,
+              "shared_bytes": 49168
+            }
+          },
+          "grid": [
+            8
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                6.270711795209696,
+                6.208760158057786,
+                6.087382441233719
+              ],
+              "median_us": 6.208760158057786,
+              "min_us": 6.087382441233719,
+              "max_us": 6.270711795209696
+            },
+            "split": {
+              "samples_us": [
+                4.863700410153003,
+                4.8299733230045865,
+                4.834811664322047
+              ],
+              "median_us": 4.834811664322047,
+              "min_us": 4.8299733230045865,
+              "max_us": 4.863700410153003
+            }
+          }
+        },
+        {
+          "id": 7,
+          "config": {
+            "bm": 64,
+            "bn": 256,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 188,
+              "spills": 0,
+              "shared_bytes": 131136
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 167,
+              "spills": 0,
+              "shared_bytes": 122904
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                4.599178441472956,
+                4.607113991964136,
+                4.512704306050026
+              ],
+              "median_us": 4.599178441472956,
+              "min_us": 4.512704306050026,
+              "max_us": 4.607113991964136
+            },
+            "split": {
+              "samples_us": [
+                5.151694503860857,
+                5.063498923272797,
+                5.043539434972435
+              ],
+              "median_us": 5.063498923272797,
+              "min_us": 5.043539434972435,
+              "max_us": 5.151694503860857
+            }
+          }
+        },
+        {
+          "id": 8,
+          "config": {
+            "bm": 128,
+            "bn": 256,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 384,
+              "shared_bytes": 98344
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 255,
+              "spills": 256,
+              "shared_bytes": 98320
+            }
+          },
+          "grid": [
+            2
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                37.91373770758016,
+                36.82675648884601,
+                36.81190021502705
+              ],
+              "median_us": 36.82675648884601,
+              "min_us": 36.81190021502705,
+              "max_us": 37.91373770758016
+            },
+            "split": {
+              "samples_us": [
+                23.938857552839472,
+                23.7381649017334,
+                23.718936216897806
+              ],
+              "median_us": 23.7381649017334,
+              "min_us": 23.718936216897806,
+              "max_us": 23.938857552839472
+            }
+          }
+        },
+        {
+          "id": 6,
+          "config": {
+            "bm": 64,
+            "bn": 256,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 189,
+              "spills": 0,
+              "shared_bytes": 81960
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 168,
+              "spills": 0,
+              "shared_bytes": 81936
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.333718715175505,
+                5.256173617679003,
+                5.262156085270207
+              ],
+              "median_us": 5.262156085270207,
+              "min_us": 5.256173617679003,
+              "max_us": 5.333718715175505
+            },
+            "split": {
+              "samples_us": [
+                5.6451383118446055,
+                5.596883946064255,
+                5.566704034805298
+              ],
+              "median_us": 5.596883946064255,
+              "min_us": 5.566704034805298,
+              "max_us": 5.6451383118446055
+            }
+          }
+        },
+        {
+          "id": 1,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 231,
+              "spills": 0,
+              "shared_bytes": 114752
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 157,
+              "spills": 0,
+              "shared_bytes": 98328
+            }
+          },
+          "grid": [
+            4
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.380070672860836,
+                5.385590285965891,
+                5.285972560921761
+              ],
+              "median_us": 5.380070672860836,
+              "min_us": 5.285972560921761,
+              "max_us": 5.385590285965891
+            },
+            "split": {
+              "samples_us": [
+                5.168000040533336,
+                5.14267235994339,
+                5.130442067196495
+              ],
+              "median_us": 5.14267235994339,
+              "min_us": 5.130442067196495,
+              "max_us": 5.168000040533336
+            }
+          }
+        },
+        {
+          "id": 5,
+          "config": {
+            "bm": 128,
+            "bn": 64,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 1.121751392929582e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 136,
+              "spills": 0,
+              "shared_bytes": 90176
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 90,
+              "spills": 0,
+              "shared_bytes": 73752
+            }
+          },
+          "grid": [
+            8
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                5.49298699025984,
+                5.47636044331086,
+                5.4184707654576725
+              ],
+              "median_us": 5.47636044331086,
+              "min_us": 5.4184707654576725,
+              "max_us": 5.49298699025984
+            },
+            "split": {
+              "samples_us": [
+                4.345370337153166,
+                4.266778027618325,
+                4.24432757354918
+              ],
+              "median_us": 4.266778027618325,
+              "min_us": 4.24432757354918,
+              "max_us": 4.345370337153166
+            }
+          }
+        }
+      ],
+      "selected_by_discovery": {
+        "fused": 3,
+        "split": 3
+      },
+      "holdout_correctness": {
+        "0": {
+          "q_exact": true,
+          "pair_exact": true,
+          "fused_allclose": true,
+          "split_allclose": true,
+          "max_pair_error": 0.0,
+          "relative_l2_error": 2.006333124882076e-05
+        },
+        "3": {
+          "q_exact": true,
+          "pair_exact": true,
+          "fused_allclose": true,
+          "split_allclose": true,
+          "max_pair_error": 0.0,
+          "relative_l2_error": 2.006333124882076e-05
+        }
+      },
+      "holdout": {
+        "0_fused": {
+          "samples_us": [
+            5.8070544710302965,
+            5.717650176163747,
+            5.687218278510386,
+            5.703459609865519,
+            5.711775849767998,
+            5.680809365575549,
+            5.698008382403381
+          ],
+          "median_us": 5.703459609865519,
+          "min_us": 5.680809365575549,
+          "max_us": 5.8070544710302965
+        },
+        "0_split": {
+          "samples_us": [
+            5.403333334695725,
+            5.412644214844436,
+            5.383302492973132,
+            5.395141528054135,
+            5.361936974090526,
+            5.391206853410118,
+            5.368297365871635
+          ],
+          "median_us": 5.391206853410118,
+          "min_us": 5.361936974090526,
+          "max_us": 5.412644214844436
+        },
+        "3_fused": {
+          "samples_us": [
+            3.812322376379326,
+            3.7884044068275435,
+            3.7721856396514037,
+            3.8066905343307638,
+            3.822702916463216,
+            3.7880048316781547,
+            3.7996737650652834
+          ],
+          "median_us": 3.7996737650652834,
+          "min_us": 3.7721856396514037,
+          "max_us": 3.822702916463216
+        },
+        "3_split": {
+          "samples_us": [
+            4.126532199814564,
+            4.080979015443709,
+            4.060307684162798,
+            4.072811115333147,
+            4.076550868219006,
+            4.0601292551865225,
+            4.065315422822362
+          ],
+          "median_us": 4.072811115333147,
+          "min_us": 4.0601292551865225,
+          "max_us": 4.126532199814564
+        }
+      },
+      "same_config_ratios": {
+        "0": 0.9452520438795984,
+        "3": 1.071884421441421
+      },
+      "selected_pair_ratio": 1.071884421441421
+    },
+    {
+      "size": 2048,
+      "search": [
+        {
+          "id": 0,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 230,
+              "spills": 0,
+              "shared_bytes": 65576
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 155,
+              "spills": 0,
+              "shared_bytes": 65552
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                86.59570624188679,
+                86.6193427136664,
+                86.72977671211149
+              ],
+              "median_us": 86.6193427136664,
+              "min_us": 86.59570624188679,
+              "max_us": 86.72977671211149
+            },
+            "split": {
+              "samples_us": [
+                59.66453882727293,
+                59.173369825932014,
+                59.27112897237142
+              ],
+              "median_us": 59.27112897237142,
+              "min_us": 59.173369825932014,
+              "max_us": 59.66453882727293
+            }
+          }
+        },
+        {
+          "id": 11,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 128,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 0,
+              "shared_bytes": 229440
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 158,
+              "spills": 0,
+              "shared_bytes": 196632
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                49.8153213298682,
+                49.42496765491574,
+                49.2574347390069
+              ],
+              "median_us": 49.42496765491574,
+              "min_us": 49.2574347390069,
+              "max_us": 49.8153213298682
+            },
+            "split": {
+              "samples_us": [
+                42.25503622767437,
+                41.987670208774716,
+                42.21613917047578
+              ],
+              "median_us": 42.21613917047578,
+              "min_us": 41.987670208774716,
+              "max_us": 42.25503622767437
+            }
+          }
+        },
+        {
+          "id": 10,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 128,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 0,
+              "shared_bytes": 131112
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 158,
+              "spills": 0,
+              "shared_bytes": 131088
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                71.76938131841689,
+                71.61104739011832,
+                71.97074985983383
+              ],
+              "median_us": 71.76938131841689,
+              "min_us": 71.61104739011832,
+              "max_us": 71.97074985983383
+            },
+            "split": {
+              "samples_us": [
+                55.646714336795895,
+                55.13900524468592,
+                55.21667586432563
+              ],
+              "median_us": 55.21667586432563,
+              "min_us": 55.13900524468592,
+              "max_us": 55.646714336795895
+            }
+          }
+        },
+        {
+          "id": 3,
+          "config": {
+            "bm": 64,
+            "bn": 128,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 120,
+              "spills": 0,
+              "shared_bytes": 81984
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 94,
+              "spills": 0,
+              "shared_bytes": 73752
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                73.06526443721111,
+                73.17431550276906,
+                73.19152232297918
+              ],
+              "median_us": 73.17431550276906,
+              "min_us": 73.06526443721111,
+              "max_us": 73.19152232297918
+            },
+            "split": {
+              "samples_us": [
+                63.840035174755336,
+                63.62325900938452,
+                63.72381271199977
+              ],
+              "median_us": 63.72381271199977,
+              "min_us": 63.62325900938452,
+              "max_us": 63.840035174755336
+            }
+          }
+        },
+        {
+          "id": 5,
+          "config": {
+            "bm": 128,
+            "bn": 64,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 136,
+              "spills": 0,
+              "shared_bytes": 90176
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 92,
+              "spills": 0,
+              "shared_bytes": 73752
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                113.00003772645485,
+                114.11642581224442,
+                113.4683283724526
+              ],
+              "median_us": 113.4683283724526,
+              "min_us": 113.00003772645485,
+              "max_us": 114.11642581224442
+            },
+            "split": {
+              "samples_us": [
+                58.816544060568205,
+                58.76612094564176,
+                58.66898389963003
+              ],
+              "median_us": 58.76612094564176,
+              "min_us": 58.66898389963003,
+              "max_us": 58.816544060568205
+            }
+          }
+        },
+        {
+          "id": 6,
+          "config": {
+            "bm": 64,
+            "bn": 256,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 194,
+              "spills": 0,
+              "shared_bytes": 81960
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 157,
+              "spills": 0,
+              "shared_bytes": 81936
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                81.44230201230413,
+                81.53118239508734,
+                79.59699171135225
+              ],
+              "median_us": 81.44230201230413,
+              "min_us": 79.59699171135225,
+              "max_us": 81.53118239508734
+            },
+            "split": {
+              "samples_us": [
+                65.20219389925299,
+                65.00123036213411,
+                64.96484592982702
+              ],
+              "median_us": 65.00123036213411,
+              "min_us": 64.96484592982702,
+              "max_us": 65.20219389925299
+            }
+          }
+        },
+        {
+          "id": 7,
+          "config": {
+            "bm": 64,
+            "bn": 256,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 193,
+              "spills": 0,
+              "shared_bytes": 131136
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 157,
+              "spills": 0,
+              "shared_bytes": 122904
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                47.315853436787926,
+                47.30136420510033,
+                46.58557369501264
+              ],
+              "median_us": 47.30136420510033,
+              "min_us": 46.58557369501264,
+              "max_us": 47.315853436787926
+            },
+            "split": {
+              "samples_us": [
+                45.60055116717325,
+                45.644580616670495,
+                45.63242898603376
+              ],
+              "median_us": 45.63242898603376,
+              "min_us": 45.60055116717325,
+              "max_us": 45.644580616670495
+            }
+          }
+        },
+        {
+          "id": 4,
+          "config": {
+            "bm": 128,
+            "bn": 64,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 134,
+              "spills": 0,
+              "shared_bytes": 49192
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 92,
+              "spills": 0,
+              "shared_bytes": 49168
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                180.04436492919922,
+                180.03000864168493,
+                179.6513162008146
+              ],
+              "median_us": 180.03000864168493,
+              "min_us": 179.6513162008146,
+              "max_us": 180.04436492919922
+            },
+            "split": {
+              "samples_us": [
+                93.35027341021606,
+                92.90309319129356,
+                92.80414320018193
+              ],
+              "median_us": 92.90309319129356,
+              "min_us": 92.80414320018193,
+              "max_us": 93.35027341021606
+            }
+          }
+        },
+        {
+          "id": 9,
+          "config": {
+            "bm": 128,
+            "bn": 256,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 384,
+              "shared_bytes": 163904
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 255,
+              "spills": 256,
+              "shared_bytes": 147480
+            }
+          },
+          "grid": [
+            128
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                373.88734083909253,
+                373.8886404037475,
+                374.4544004782652
+              ],
+              "median_us": 373.8886404037475,
+              "min_us": 373.88734083909253,
+              "max_us": 374.4544004782652
+            },
+            "split": {
+              "samples_us": [
+                217.1735877421365,
+                215.50738569619,
+                215.69279933321303
+              ],
+              "median_us": 215.69279933321303,
+              "min_us": 215.50738569619,
+              "max_us": 217.1735877421365
+            }
+          }
+        },
+        {
+          "id": 1,
+          "config": {
+            "bm": 128,
+            "bn": 128,
+            "bk": 64,
+            "stages": 3,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 231,
+              "spills": 0,
+              "shared_bytes": 114752
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 155,
+              "spills": 0,
+              "shared_bytes": 98328
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                50.94322124814806,
+                50.72841871352423,
+                51.49965748387812
+              ],
+              "median_us": 50.94322124814806,
+              "min_us": 50.72841871352423,
+              "max_us": 51.49965748387812
+            },
+            "split": {
+              "samples_us": [
+                43.82523051380406,
+                43.83579951066237,
+                43.96941797299819
+              ],
+              "median_us": 43.83579951066237,
+              "min_us": 43.82523051380406,
+              "max_us": 43.96941797299819
+            }
+          }
+        },
+        {
+          "id": 8,
+          "config": {
+            "bm": 128,
+            "bn": 256,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 255,
+              "spills": 384,
+              "shared_bytes": 98344
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 255,
+              "spills": 256,
+              "shared_bytes": 98320
+            }
+          },
+          "grid": [
+            128
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                390.9975553813734,
+                391.24522460134403,
+                391.59913449674036
+              ],
+              "median_us": 391.24522460134403,
+              "min_us": 390.9975553813734,
+              "max_us": 391.59913449674036
+            },
+            "split": {
+              "samples_us": [
+                221.76654555580834,
+                220.78256749395115,
+                220.8438915992851
+              ],
+              "median_us": 220.8438915992851,
+              "min_us": 220.78256749395115,
+              "max_us": 221.76654555580834
+            }
+          }
+        },
+        {
+          "id": 2,
+          "config": {
+            "bm": 64,
+            "bn": 128,
+            "bk": 64,
+            "stages": 2,
+            "warps": 4
+          },
+          "correctness": {
+            "q_exact": true,
+            "pair_exact": true,
+            "fused_allclose": true,
+            "split_allclose": true,
+            "max_pair_error": 0.0,
+            "relative_l2_error": 3.937145811505616e-05
+          },
+          "valid": true,
+          "resources": {
+            "fused": {
+              "registers": 121,
+              "spills": 0,
+              "shared_bytes": 49192
+            },
+            "pointwise": {
+              "registers": 16,
+              "spills": 0,
+              "shared_bytes": 0
+            },
+            "matmul": {
+              "registers": 94,
+              "spills": 0,
+              "shared_bytes": 49168
+            }
+          },
+          "grid": [
+            132
+          ],
+          "discovery": {
+            "fused": {
+              "samples_us": [
+                134.0363632548939,
+                132.1865711893354,
+                131.7803135940007
+              ],
+              "median_us": 132.1865711893354,
+              "min_us": 131.7803135940007,
+              "max_us": 134.0363632548939
+            },
+            "split": {
+              "samples_us": [
+                95.7217104681607,
+                95.81045942241643,
+                95.87147818671332
+              ],
+              "median_us": 95.81045942241643,
+              "min_us": 95.7217104681607,
+              "max_us": 95.87147818671332
+            }
+          }
+        }
+      ],
+      "selected_by_discovery": {
+        "fused": 7,
+        "split": 11
+      },
+      "holdout_correctness": {
+        "0": {
+          "q_exact": true,
+          "pair_exact": true,
+          "fused_allclose": true,
+          "split_allclose": true,
+          "max_pair_error": 0.0,
+          "relative_l2_error": 3.91227840736974e-05
+        },
+        "7": {
+          "q_exact": true,
+          "pair_exact": true,
+          "fused_allclose": true,
+          "split_allclose": true,
+          "max_pair_error": 0.0,
+          "relative_l2_error": 3.91227840736974e-05
+        },
+        "11": {
+          "q_exact": true,
+          "pair_exact": true,
+          "fused_allclose": true,
+          "split_allclose": true,
+          "max_pair_error": 0.0,
+          "relative_l2_error": 3.91227840736974e-05
+        }
+      },
+      "holdout": {
+        "0_fused": {
+          "samples_us": [
+            88.10105941913746,
+            87.56827966745534,
+            88.42184695791691,
+            87.9040387781655,
+            88.02823956093093,
+            88.787645489982,
+            89.04075891199247
+          ],
+          "median_us": 88.10105941913746,
+          "min_us": 87.56827966745534,
+          "max_us": 89.04075891199247
+        },
+        "0_split": {
+          "samples_us": [
+            58.63531935738655,
+            58.5358687990224,
+            58.486669675438804,
+            58.36167335510254,
+            58.150304330361855,
+            58.32958273835234,
+            58.29174253675673
+          ],
+          "median_us": 58.36167335510254,
+          "min_us": 58.150304330361855,
+          "max_us": 58.63531935738655
+        },
+        "7_fused": {
+          "samples_us": [
+            47.54877561098569,
+            50.00597926548549,
+            47.674012889523475,
+            47.97832877930747,
+            47.07401299932201,
+            47.71672332110083,
+            47.80602078477875
+          ],
+          "median_us": 47.71672332110083,
+          "min_us": 47.07401299932201,
+          "max_us": 50.00597926548549
+        },
+        "7_split": {
+          "samples_us": [
+            45.62712468599019,
+            45.78309912868983,
+            45.82304836304719,
+            45.77960508415497,
+            45.51625968912975,
+            45.796329153459624,
+            45.85783338136864
+          ],
+          "median_us": 45.78309912868983,
+          "min_us": 45.51625968912975,
+          "max_us": 45.85783338136864
+        },
+        "11_fused": {
+          "samples_us": [
+            54.31314389916915,
+            50.58060185966562,
+            51.42938042901883,
+            52.03495512776853,
+            54.78677526116371,
+            54.793899972476005,
+            54.68835621854685
+          ],
+          "median_us": 54.31314389916915,
+          "min_us": 50.58060185966562,
+          "max_us": 54.793899972476005
+        },
+        "11_split": {
+          "samples_us": [
+            42.01127825556575,
+            42.02378526518616,
+            44.39876529532419,
+            43.97298760544926,
+            42.487504557109204,
+            41.96363687515259,
+            42.30997358049665
+          ],
+          "median_us": 42.30997358049665,
+          "min_us": 41.96363687515259,
+          "max_us": 44.39876529532419
+        }
+      },
+      "same_config_ratios": {
+        "0": 0.6624400857366435,
+        "7": 0.9594770122961076,
+        "11": 0.7790006348931661
+      },
+      "selected_pair_ratio": 0.8866906743738362
+    }
+  ],
+  "elapsed_seconds": 46.364562684999996
+}

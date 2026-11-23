@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trace real da seleção TMA</title>
+<style>
+:root {color-scheme:light dark; --foreground:light-dark(#18181b,#ededee); --muted-foreground:light-dark(#52525b,#b3b3bd); --border:light-dark(#dedee4,#42424c); --primary:light-dark(#dddde5,#373741); --primary-foreground:var(--foreground); --chart-1:light-dark(#7569c4,#a89bea); --chart-2:light-dark(#986128,#d0aa74); --chart-3:light-dark(#3b7b9b,#83bad4); --chart-4:light-dark(#277b66,#7dc3ab); --font-sans:system-ui,sans-serif; --font-mono:ui-monospace,monospace; --radius:8px}
+body {margin:0; color:var(--foreground); font-family:var(--font-sans); font-size:14px}
+#tma-traces {display:grid; gap:16px; max-width:1100px; margin:auto}
+#tma-traces .controls {display:flex; flex-wrap:wrap; gap:12px; align-items:end}
+#tma-traces label {display:grid; gap:5px; min-width:0}
+#tma-traces select {max-width:100%; font:inherit; color:var(--foreground); background:var(--primary); border:1px solid var(--border); border-radius:4px; padding:6px}
+#tma-traces .main-select {flex:1 1 290px}
+#tma-traces h2 {font-size:inherit; font-weight:500; margin:0}
+#tma-traces .secondary {color:var(--muted-foreground)}
+#tma-traces svg {display:block; width:100%; height:255px; overflow:visible}
+#tma-traces svg text {fill:var(--foreground); font-size:12px; font-family:var(--font-sans)}
+#tma-traces .legend {display:flex; flex-wrap:wrap; gap:16px}
+#tma-traces .swatch {display:inline-block; width:12px; height:12px; margin-right:6px}
+#tma-traces .events {display:grid; gap:6px}
+#tma-traces .event {text-align:start; color:var(--foreground); font:inherit; background:transparent; border:0; padding:6px 0; overflow-wrap:anywhere}
+#tma-traces .event:focus-visible {outline:2px solid var(--chart-1)}
+#tma-traces .details {white-space:pre-wrap; overflow-wrap:anywhere; font-family:var(--font-mono); margin:0; font-size:12px; min-height:65px}
+#tma-traces .status {overflow-wrap:anywhere}
+</style>
+<div id="tma-traces">
+  <h2>Execução real após a seleção • H100</h2>
+  <div class="controls">
+    <label class="main-select">Braço / caso / versão<select id="trace-case" aria-label="Trace"></select></label>
+    <label>Chamada<select id="trace-call"><option value="0">1</option><option value="1" selected>2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="all">Todas</option></select></label>
+    <label>Intervalo<select id="trace-window"><option value="gpu">Recorte da GPU</option><option value="cpu">Chamada completa</option></select></label>
+  </div>
+  <div class="status" id="trace-status" aria-live="polite"></div>
+  <svg id="trace-chart" role="img" aria-label="Linha do tempo com chamada CPU, APIs CUDA e kernels na GPU"></svg>
+  <div class="legend"><span><i class="swatch" style="background:var(--chart-1)"></i>Região CPU</span><span><i class="swatch" style="background:var(--chart-2)"></i>API CUDA</span><span><i class="swatch" style="background:var(--chart-3)"></i>Cast separado</span><span><i class="swatch" style="background:var(--chart-4)"></i>Matmul / kernel fundido</span></div>
+  <div id="trace-kernels" class="events"></div>
+  <pre id="trace-details" class="details" aria-live="polite"></pre>
+  <div id="trace-source" class="secondary"></div>
+</div>
+<script>
+(() => {
+const data = __TRACE_DATA__;
+const root = document.getElementById('tma-traces');
+const query = id => root.querySelector('#' + id);
+const chooser = query('trace-case'), call = query('trace-call'), windowMode = query('trace-window');
+const svg = query('trace-chart'), ns = 'http://www.w3.org/2000/svg';
+const fmt = n => n.toLocaleString('pt-BR', {maximumFractionDigits:3});
+data.forEach((t, i) => {const o = document.createElement('option'); o.value = i; o.textContent = t.id.replaceAll('/', ' / '); chooser.append(o)});
+function el(tag, attrs, text) {const e = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v)); if(text !== undefined) e.textContent = text; svg.append(e); return e}
+function detail(e, origin) {query('trace-details').textContent = `${e.name}\nInício: ${fmt(e.ts-origin)} µs • Duração: ${fmt(e.dur)} µs${e.stream == null ? '' : ' • stream '+e.stream}${e.correlation == null ? '' : ' • correlação '+e.correlation}`}
+function draw() {
+ const t = data[Number(chooser.value)], check = t.check;
+ const calls = t.events.filter(e => e.cat === 'user_annotation');
+ const selectedCalls = call.value === 'all' ? calls : [calls[Number(call.value)]];
+ const start = Math.min(...selectedCalls.map(e => e.ts)), end = Math.max(...selectedCalls.map(e => e.ts+e.dur));
+ const events = t.events.filter(e => call.value === 'all' ? e.call !== null : e.call === Number(call.value));
+ const gpu = events.filter(e => e.cat === 'kernel');
+ let lo = start, hi = end;
+ if(windowMode.value === 'gpu' && gpu.length) {lo=Math.min(...gpu.map(e=>e.ts)); hi=Math.max(...gpu.map(e=>e.ts+e.dur)); const pad=Math.max((hi-lo)*.08,.1); lo-=pad; hi+=pad}
+ const width = Math.max(280, svg.clientWidth), left = width < 440 ? 77 : 110, right = 16, top = 26, bottom = 185;
+ const x = v => left + (v-lo)/(hi-lo)*(width-left-right);
+ svg.replaceChildren(); svg.setAttribute('viewBox',`0 0 ${width} 255`);
+ el('title',{},`${t.id}: ${gpu.length} kernels na janela selecionada`);
+ el('rect',{x:left,y:top,width:width-left-right,height:bottom-top,fill:'none',stroke:'var(--border)','data-chart-frame':''});
+ const tickCount = width<440 ? 3 : 5;
+ for(let i=0;i<=tickCount;i++){const value=lo+(hi-lo)*i/tickCount; const px=x(value); el('line',{x1:px,x2:px,y1:top,y2:bottom,stroke:'var(--border)','stroke-opacity':.45});el('text',{x:px,y:207,'text-anchor':i===0?'start':i===tickCount?'end':'middle'},fmt(value-start))}
+ el('text',{x:(left+width-right)/2,y:237,'text-anchor':'middle',class:'axis-title','data-axis':'x'},'Tempo desde o início da chamada (µs)');
+ el('text',{x:0,y:15,class:'axis-title','data-axis':'y'},'Recurso');
+ const lane = e => e.cat==='user_annotation'?0:e.cat==='kernel'?2:1;
+ ['CPU','API CUDA','GPU'].forEach((label,i)=>el('text',{x:left-10,y:top+28+i*51,'text-anchor':'end'},label));
+ for(const e of events){if(e.ts+e.dur<=lo || e.ts>=hi)continue;const a=Math.max(e.ts,lo),b=Math.min(e.ts+e.dur,hi);const color=e.cat==='user_annotation'?'var(--chart-1)':e.cat==='kernel'?(e.name.includes('triton_poi')?'var(--chart-3)':'var(--chart-4)'):'var(--chart-2)'; const mark=el('rect',{x:x(a),y:top+10+lane(e)*51,width:Math.max(.3,x(b)-x(a)),height:27,fill:color}); const title=document.createElementNS(ns,'title');title.textContent=`${e.name} • ${fmt(e.dur)} µs`;mark.append(title);mark.addEventListener('click',()=>detail(e,start))}
+ query('trace-status').textContent=`${check.observed_kernels_per_call.join(', ')} kernels nas 5 chamadas • esperado: ${check.expected_kernels_per_call}/chamada • correção numérica: ${check.correctness_passed?'passou':'falhou'} • template TMA estendido: ${check.extension_in_wrapper?(check.expected_kernels_per_call>1?'presente, prólogo separado':'presente'):'ausente'}`;
+ query('trace-kernels').replaceChildren();
+ gpu.forEach((e,i)=>{const b=document.createElement('button');b.type='button';b.className='event';b.textContent=`${i+1}. ${e.name} · ${fmt(e.dur)} µs`;b.addEventListener('click',()=>detail(e,start));query('trace-kernels').append(b)});
+ if(gpu.length)detail(gpu[0],start);
+ query('trace-source').textContent=`${check.trace_file} • chamadas identificadas pela correlação da API CUDA • regiões CPU incluem sincronização; durações sob profiler não substituem o benchmark de latência.${check.gpu_before_cpu_launch_events?' Atenção: desalinhamento dos relógios CPU/GPU neste trace.':''}`;
+}
+[chooser,call,windowMode].forEach(e=>e.addEventListener('change',draw));
+new ResizeObserver(draw).observe(svg);draw();
+})();
+</script>
+</html>

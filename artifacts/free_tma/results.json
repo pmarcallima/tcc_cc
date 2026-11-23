@@ -1,0 +1,359 @@
+{
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "native_config": {
+    "gemm_backends": "ATEN,TRITON,CPP",
+    "persistent_tma_enabled": false,
+    "prologue_fusion": true
+  },
+  "allow_tma": true,
+  "method": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "rounds": 5,
+    "rep_ms": 30,
+    "atol": 0.125,
+    "rtol": 0.01
+  },
+  "cases": [
+    {
+      "name": "max_autotune_256_256_256",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "mode": "max_autotune",
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        },
+        "patched": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [
+            {
+              "extended": true,
+              "tile": [
+                128,
+                256,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                128
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                128
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                256,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            }
+          ],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          3.2654683285779913,
+          3.41710201939758,
+          3.3872063670839583,
+          3.369283676147461,
+          3.3622521745122
+        ],
+        "patched": [
+          3.4110032876984016,
+          3.3843657191918823,
+          3.3768092673228676,
+          3.371038338572709,
+          3.359459434543644
+        ]
+      },
+      "graph_medians_us": {
+        "original": 3.369283676147461,
+        "patched": 3.3768092673228676
+      }
+    },
+    {
+      "name": "max_autotune_2048_1024_256",
+      "shape_mnk": [
+        2048,
+        1024,
+        256
+      ],
+      "mode": "max_autotune",
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        },
+        "patched": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [
+            {
+              "extended": true,
+              "tile": [
+                128,
+                256,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                128
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                128
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                256,
+                128,
+                64
+              ]
+            },
+            {
+              "extended": true,
+              "tile": [
+                128,
+                128,
+                64
+              ]
+            }
+          ],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          6.278472270198803,
+          6.25399404497289,
+          6.187889565982578,
+          6.140793540434751,
+          6.198661303033634
+        ],
+        "patched": [
+          6.277958597716701,
+          6.214023588084372,
+          6.1835097209099805,
+          6.160658855064243,
+          6.1915675799051915
+        ]
+      },
+      "graph_medians_us": {
+        "original": 6.198661303033634,
+        "patched": 6.1915675799051915
+      }
+    }
+  ],
+  "elapsed_seconds": 13.956933951
+}

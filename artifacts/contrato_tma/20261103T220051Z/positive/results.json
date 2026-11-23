@@ -1,0 +1,300 @@
+{
+  "name": "positive",
+  "shape_mnk": [
+    256,
+    256,
+    256
+  ],
+  "operation": "cast_a",
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_uuid": "f0f84bb6-8b1d-9e1f-6bf5-0e105c1e23d7"
+  },
+  "paths": {
+    "original": {
+      "status": "executed",
+      "candidate_decisions": [],
+      "native_tma_eligibility": [
+        true
+      ],
+      "prologue_rejections": [],
+      "correctness": [
+        {
+          "seed": 0,
+          "allclose": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 1,
+          "allclose": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 2,
+          "allclose": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "config": {
+        "max_autotune": true,
+        "max_autotune_gemm": true,
+        "max_autotune_gemm_backends": "ATEN,TRITON",
+        "max_epilogue_benchmarked_choices": 8,
+        "triton.enable_persistent_tma_matmul": true,
+        "prologue_fusion": true,
+        "epilogue_fusion": false,
+        "force_disable_caches": true,
+        "compile_threads": 1,
+        "trace.enabled": true,
+        "trace.output_code": true,
+        "trace.debug_dir": "/tmp/tcc_contract_trace/c7b5072f4386402080e79b36933b6a1c/original"
+      },
+      "offered_choices": [
+        {
+          "operation": "mm",
+          "names": [
+            "mm",
+            "triton_mm_0",
+            "triton_mm_persistent_tma_1"
+          ]
+        }
+      ],
+      "candidate_limits": {
+        "common": {
+          "attempted": 1,
+          "generated": 1,
+          "skipped": 20,
+          "config": {
+            "BLOCK_M": 32,
+            "BLOCK_N": 32,
+            "BLOCK_K": 16,
+            "num_stages": 1,
+            "num_warps": 2
+          }
+        },
+        "tma": {
+          "attempted": 1,
+          "generated": 1,
+          "skipped": 7,
+          "config": {
+            "BLOCK_M": 64,
+            "BLOCK_N": 128,
+            "BLOCK_K": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          }
+        }
+      },
+      "input_metadata": [
+        {
+          "dtype": "torch.int8",
+          "shape": [
+            256,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        },
+        {
+          "dtype": "torch.float16",
+          "shape": [
+            256,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        },
+        {
+          "dtype": "torch.float16",
+          "shape": [
+            1,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        }
+      ],
+      "profile_outputs_correct": true,
+      "recompile_guard": "fail_on_recompile",
+      "profile_calls": 3,
+      "triton_launches": [
+        "triton_poi_fused__to_copy_0"
+      ],
+      "extern_calls": [
+        "extern_kernels.mm"
+      ],
+      "extension_in_wrapper": false
+    },
+    "patched": {
+      "status": "executed",
+      "candidate_decisions": [
+        {
+          "extended": true,
+          "reason": "accepted",
+          "tile": [
+            64,
+            128,
+            64
+          ],
+          "inputs": [
+            {
+              "dtype": "torch.float16",
+              "shape": [
+                "256",
+                "256"
+              ],
+              "stride": [
+                "256",
+                "1"
+              ],
+              "offset": "0"
+            },
+            {
+              "dtype": "torch.float16",
+              "shape": [
+                "256",
+                "256"
+              ],
+              "stride": [
+                "256",
+                "1"
+              ],
+              "offset": "0"
+            }
+          ],
+          "delegated_to": "extended",
+          "status": "generated"
+        }
+      ],
+      "native_tma_eligibility": [
+        true
+      ],
+      "prologue_rejections": [],
+      "correctness": [
+        {
+          "seed": 0,
+          "allclose": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 1,
+          "allclose": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 2,
+          "allclose": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "config": {
+        "max_autotune": true,
+        "max_autotune_gemm": true,
+        "max_autotune_gemm_backends": "ATEN,TRITON",
+        "max_epilogue_benchmarked_choices": 8,
+        "triton.enable_persistent_tma_matmul": true,
+        "prologue_fusion": true,
+        "epilogue_fusion": false,
+        "force_disable_caches": true,
+        "compile_threads": 1,
+        "trace.enabled": true,
+        "trace.output_code": true,
+        "trace.debug_dir": "/tmp/tcc_contract_trace/c7b5072f4386402080e79b36933b6a1c/patched"
+      },
+      "offered_choices": [
+        {
+          "operation": "mm",
+          "names": [
+            "mm",
+            "triton_mm_2",
+            "triton_mm_persistent_tma_3"
+          ]
+        }
+      ],
+      "candidate_limits": {
+        "common": {
+          "attempted": 1,
+          "generated": 1,
+          "skipped": 20,
+          "config": {
+            "BLOCK_M": 32,
+            "BLOCK_N": 32,
+            "BLOCK_K": 16,
+            "num_stages": 1,
+            "num_warps": 2
+          }
+        },
+        "tma": {
+          "attempted": 1,
+          "generated": 1,
+          "skipped": 7,
+          "config": {
+            "BLOCK_M": 64,
+            "BLOCK_N": 128,
+            "BLOCK_K": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          }
+        }
+      },
+      "input_metadata": [
+        {
+          "dtype": "torch.int8",
+          "shape": [
+            256,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        },
+        {
+          "dtype": "torch.float16",
+          "shape": [
+            256,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        },
+        {
+          "dtype": "torch.float16",
+          "shape": [
+            1,
+            256
+          ],
+          "stride": [
+            256,
+            1
+          ],
+          "offset": 0
+        }
+      ],
+      "profile_outputs_correct": true,
+      "recompile_guard": "fail_on_recompile",
+      "profile_calls": 3,
+      "triton_launches": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "extern_calls": [],
+      "extension_in_wrapper": true
+    }
+  },
+  "elapsed_seconds": 5.215298182
+}

@@ -1,0 +1,865 @@
+{
+  "source": "artifacts/selecao_prologo_ab/20261103T175152Z",
+  "traces": 29,
+  "all_passed": true,
+  "checks": [
+    {
+      "arm": "arm0",
+      "case": "pos_256_256_256",
+      "label": "patched",
+      "trace_file": "arm0/pos_256_256_256_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm0",
+      "case": "pos_2048_1024_256",
+      "label": "patched",
+      "trace_file": "arm0/pos_2048_1024_256_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_256_256_256",
+      "label": "patched",
+      "trace_file": "arm1/pos_256_256_256_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_256_256_256",
+      "label": "original",
+      "trace_file": "arm1/pos_256_256_256_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm1/pos_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_1024_1024",
+      "label": "original",
+      "trace_file": "arm1/pos_1024_1024_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 10,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_2048_2048_2048",
+      "label": "patched",
+      "trace_file": "arm1/pos_2048_2048_2048_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_256x128_64x4_1x2_h_bz_coopA_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_2048_2048_2048",
+      "label": "original",
+      "trace_file": "arm1/pos_2048_2048_2048_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_4096_4096_4096",
+      "label": "patched",
+      "trace_file": "arm1/pos_4096_4096_4096_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_256x128_64x4_1x2_h_bz_coopA_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_4096_4096_4096",
+      "label": "original",
+      "trace_file": "arm1/pos_4096_4096_4096_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 6,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_256x128_64x4_1x2_h_bz_coopA_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_256_1024",
+      "label": "patched",
+      "trace_file": "arm1/pos_1024_256_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_256_1024",
+      "label": "original",
+      "trace_file": "arm1/pos_1024_256_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_512_1024",
+      "label": "patched",
+      "trace_file": "arm1/pos_1024_512_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_512_1024",
+      "label": "original",
+      "trace_file": "arm1/pos_1024_512_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 5,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_4096_1024",
+      "label": "patched",
+      "trace_file": "arm1/pos_1024_4096_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "pos_1024_4096_1024",
+      "label": "original",
+      "trace_file": "arm1/pos_1024_4096_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "neg_b_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm1/neg_b_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 9,
+      "correctness_passed": true,
+      "extension_in_wrapper": true,
+      "tma_in_wrapper": true,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 2
+    },
+    {
+      "arm": "arm1",
+      "case": "neg_b_1024_1024_1024",
+      "label": "original",
+      "trace_file": "arm1/neg_b_1024_1024_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_poi_fused__to_copy_0",
+        "triton_tem_fused__to_copy_mm_1"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "neg_a_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm1/neg_a_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x128_64x8_2x1_v_bz_NTN",
+        "triton_poi_fused__to_copy_t_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm1",
+      "case": "neg_a_1024_1024_1024",
+      "label": "original",
+      "trace_file": "arm1/neg_a_1024_1024_1024_original_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x128_64x8_2x1_v_bz_NTN",
+        "triton_poi_fused__to_copy_t_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_256_256_256",
+      "label": "patched",
+      "trace_file": "arm2/pos_256_256_256_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm2/pos_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_2048_2048_2048",
+      "label": "patched",
+      "trace_file": "arm2/pos_2048_2048_2048_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_4096_4096_4096",
+      "label": "patched",
+      "trace_file": "arm2/pos_4096_4096_4096_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_256x128_64x4_1x2_h_bz_coopA_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_1024_256_1024",
+      "label": "patched",
+      "trace_file": "arm2/pos_1024_256_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 3,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_1024_512_1024",
+      "label": "patched",
+      "trace_file": "arm2/pos_1024_512_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "pos_1024_4096_1024",
+      "label": "patched",
+      "trace_file": "arm2/pos_1024_4096_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 1,
+      "observed_kernels_per_call": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kernel_events": 5,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "guard_rejections": 0
+    },
+    {
+      "arm": "arm2",
+      "case": "neg_b_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm2/neg_b_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_128x64_64x8_1x2_h_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "guard_rejections": 6
+    },
+    {
+      "arm": "arm2",
+      "case": "neg_a_1024_1024_1024",
+      "label": "patched",
+      "trace_file": "arm2/neg_a_1024_1024_1024_patched_runtime_trace.json",
+      "calls": 5,
+      "expected_kernels_per_call": 2,
+      "observed_kernels_per_call": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_events": 10,
+      "unassigned_kernel_events": 0,
+      "count_matches_wrapper": true,
+      "triton_names_match_wrapper": true,
+      "kernel_order_matches_wrapper": true,
+      "recompile_guard": "fail_on_recompile",
+      "gpu_before_cpu_launch_events": 0,
+      "correctness_passed": true,
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x128_64x8_2x1_v_bz_NTN",
+        "triton_poi_fused__to_copy_t_0"
+      ],
+      "guard_rejections": 0
+    }
+  ]
+}

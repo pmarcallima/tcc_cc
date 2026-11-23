@@ -1,0 +1,16 @@
+===== attempting fusion (1/10): 2 nodes =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[256, 256]', 'origins=OrderedSet([convert_element_type])', 'stack_traces = {', '  File "/root/modal_inductor_plain_prologues.py", line 53, in cast_small_original', '    return x.to(torch.float16) @ weight', '           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+cannot fuse op0 with op1: template has no allowed prologue inputs
+cannot fuse op1 with op0: node1 must go before node2
+found 0 possible fusions
+completed fusion round (1/10): fused 2 nodes into 2 nodes
+
+===== fusion complete (1 iterations) =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[256, 256]', 'origins=OrderedSet([convert_element_type])', 'stack_traces = {', '  File "/root/modal_inductor_plain_prologues.py", line 53, in cast_small_original', '    return x.to(torch.float16) @ weight', '           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+cannot fuse op0 with op1: template has no allowed prologue inputs
+cannot fuse op1 with op0: node1 must go before node2
+found 0 possible fusions

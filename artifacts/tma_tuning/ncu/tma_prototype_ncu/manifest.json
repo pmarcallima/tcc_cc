@@ -1,0 +1,147 @@
+{
+  "clock_control": "none",
+  "cache_control": "none",
+  "reports": {
+    "n256_baseline_fused": {
+      "label": "n256_baseline_fused",
+      "size": 256,
+      "mode": "fused",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 50 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 50\n==PROF== Report: /out/tma_prototype_ncu/n256_baseline_fused.ncu-rep\n"
+    },
+    "n256_baseline_matmul": {
+      "label": "n256_baseline_matmul",
+      "size": 256,
+      "mode": "matmul",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 127 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 127\n==PROF== Report: /out/tma_prototype_ncu/n256_baseline_matmul.ncu-rep\n"
+    },
+    "n256_baseline_pointwise": {
+      "label": "n256_baseline_pointwise",
+      "size": 256,
+      "mode": "pointwise",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 196 (/usr/local/bin/python3)\n==PROF== Profiling \"materialize_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 196\n==PROF== Report: /out/tma_prototype_ncu/n256_baseline_pointwise.ncu-rep\n"
+    },
+    "n256_selected_fused": {
+      "label": "n256_selected_fused",
+      "size": 256,
+      "mode": "fused",
+      "config": {
+        "bm": 64,
+        "bn": 128,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 265 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 265\n==PROF== Report: /out/tma_prototype_ncu/n256_selected_fused.ncu-rep\n"
+    },
+    "n256_selected_matmul": {
+      "label": "n256_selected_matmul",
+      "size": 256,
+      "mode": "matmul",
+      "config": {
+        "bm": 64,
+        "bn": 128,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 336 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 336\n==PROF== Report: /out/tma_prototype_ncu/n256_selected_matmul.ncu-rep\n"
+    },
+    "n2048_baseline_fused": {
+      "label": "n2048_baseline_fused",
+      "size": 2048,
+      "mode": "fused",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 405 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 405\n==PROF== Report: /out/tma_prototype_ncu/n2048_baseline_fused.ncu-rep\n"
+    },
+    "n2048_baseline_matmul": {
+      "label": "n2048_baseline_matmul",
+      "size": 2048,
+      "mode": "matmul",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 477 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 477\n==PROF== Report: /out/tma_prototype_ncu/n2048_baseline_matmul.ncu-rep\n"
+    },
+    "n2048_baseline_pointwise": {
+      "label": "n2048_baseline_pointwise",
+      "size": 2048,
+      "mode": "pointwise",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 64,
+        "stages": 2,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 546 (/usr/local/bin/python3)\n==PROF== Profiling \"materialize_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 546\n==PROF== Report: /out/tma_prototype_ncu/n2048_baseline_pointwise.ncu-rep\n"
+    },
+    "n2048_selected_fused": {
+      "label": "n2048_selected_fused",
+      "size": 2048,
+      "mode": "fused",
+      "config": {
+        "bm": 64,
+        "bn": 256,
+        "bk": 64,
+        "stages": 3,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 615 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 615\n==PROF== Report: /out/tma_prototype_ncu/n2048_selected_fused.ncu-rep\n"
+    },
+    "n2048_selected_matmul": {
+      "label": "n2048_selected_matmul",
+      "size": 2048,
+      "mode": "matmul",
+      "config": {
+        "bm": 128,
+        "bn": 128,
+        "bk": 128,
+        "stages": 3,
+        "warps": 4
+      },
+      "returncode": 0,
+      "output_tail": "==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.\n==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.\n==PROF== Connected to process 686 (/usr/local/bin/python3)\n==PROF== Profiling \"persistent_tma_prologue\": 0%....50%....100% - 13 passes\n==PROF== Disconnected from process 686\n==PROF== Report: /out/tma_prototype_ncu/n2048_selected_matmul.ncu-rep\n"
+    }
+  },
+  "elapsed_seconds": 96.709401476
+}

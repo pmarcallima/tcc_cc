@@ -1,0 +1,1779 @@
+{
+  "arm": "arm0",
+  "arm_config": {
+    "declare_b": false,
+    "cap": null,
+    "negatives": false,
+    "original": false
+  },
+  "profile_runtime": true,
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_uuid": "e7bff3e5-4fae-94d3-231b-ee61a61f48ad"
+  },
+  "native_config": {
+    "benchmark_epilogue_fusion": true,
+    "max_epilogue_benchmarked_choices": 1,
+    "prologue_fusion": true,
+    "gemm_backends": "ATEN,TRITON,CPP"
+  },
+  "cases": [
+    {
+      "name": "pos_256_256_256",
+      "kind": "pos",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "label": "patched",
+      "multi_nodes": [
+        {
+          "union_allowed_prologue_inps": [
+            "arg1_1",
+            "buf0"
+          ],
+          "choices": [
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/c5/cc53jcbgdqm2mnxzanoc3lvwvc7kf2x5zrfu35soe5344ssnyjfg.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 32)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.006624000146985054,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/2y/c2y6pfgpafssdqlu4soeq56tqknqjc64ifxgb4j7n7qqxb744637.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 64)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.006816000211983919,
+              "matches_union": true
+            },
+            {
+              "str": "ExternKernelCaller(extern_kernels.mm)",
+              "type": "ExternKernelCaller",
+              "allowed_prologue_inps": [],
+              "info": {
+                "backend": "extern",
+                "kernel_call_name": "extern_kernels.mm"
+              },
+              "unfused_ms": 0.006976000033318996,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/ss/csspmdmvl7eoftu6pmw4tlli3mfwn2f2xfgrbn35u55dhlct2u4f.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=32, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 32, 64)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007135999854654074,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/qb/cqbbyvreszezq7prlkvoqqney7nydgwgd3meue2o5uq4uy7yiftk.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 64, 64)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007135999854654074,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/vo/cvoqtapdlxqvdouuzwokuufdpsuvtntxbsklbxfpfdvefkerogxe.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=32, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 128, 32)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007327999919652939,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/l5/cl5e6ece247kouagpqdxf46wyst6nicjqulancfplnvlj5zheumv.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 32)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007327999919652939,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/7s/c7scutwhcy4jv3y7b77doj7x767p6kc4iol62rkfnqlzhkk4pmvd.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 128)",
+                "num_stages": "4",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007424000184983015,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/gc/cgc4sru4irjzuoizeiphailejcaxzlvchg3bqyrqqa4meukhtfzk.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007519999984651804,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/r4/cr4aszqcynx4ammfrv37aufsa5r7ajkt44xdq27pmd27g5rsck4j.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007807999849319458,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/qk/cqkjchge2g3py4u4rrnmrb44plp53ifzczjnduewrjrc6uei44gq.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 64)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.007872000336647034,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/cx/ccxs74uk2qu4hdmfrj7cdebzn2chyh2njrvusbavmun5xyasrlqt.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.008191999979317188,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/de/cdelorcdgxi7wqovulql56dksr5yhah4vtwa53sr5nbdwjy5ezeh.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.008320000022649765,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/zk/czk3pv2a5qbcywiyaesiqlp2wfoybeqdunnmf6xm6dpvqfjszmet.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.008383999578654766,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/ct/cctepiygcvbdmvgljfdrawpmvqiw4r3pcml3nhedxpfcbied4gpt.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 64)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.008511999621987343,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/wt/cwtdjuzgg2mjszr677u7evwmcc7ir7jy3voichkkgzj3gwtqlsk5.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.00886400043964386,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/gx/cgxs7zjauxom2y4hxf6lijirvqs4xv7s6wfmet46sakieo6w3pod.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.00979200005531311,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/rl/crlpxqxkcun2dg5qoynzkolc7kpf65wuj6icm3y4dbkqwapwmvww.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.00979200005531311,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/kp/ckpyhml3p5wxmtr7rcbyzzu2h7eprfasygquym3t3udzojozio5v.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=256, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 256)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "256",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.009952000342309475,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/go/cgo2m4lwprp477oljx65m6e4orvrcfd4yoqeoffgxyovsllsb6fs.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.009952000342309475,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/xm/cxmyynnn77cdxt4qwsfd4ddbbk7xmf7e3bbt3s5dj3rvtwwgjevw.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 64)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010080000385642052,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/xr/cxrw6zyionck5dtt5ueuwwlbclcwtzfvdbpq6cv7l5kdgmt5vy5a.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010111999697983265,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/ve/cvelcicwcb6ywj5536zvizcntl56xq5kowjx35dria2hc7ekwt5p.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010143999941647053,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/ru/cruszms2tjibig3hvajytqyj72wx64jbtsa7g754kbnadf7763my.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.01033599954098463,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/x5/cx5rdkjeykkx5iyypr2jkgzqrst274pgoitrqrp3p4y5erkhewm3.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.01033599954098463,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/i2/ci2lq2to3qpo33xmixxe4wvsgh63zqjomtufwds6txmchua5iq3h.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 128)",
+                "num_stages": "2",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011680000461637974,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/jj/cjjmjk3dhr5kln3o74wpyglw2hmbpz6tzfrbwfb6hcfe7ddlhaou.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=256, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(256, 64, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "256",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011680000461637974,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/hg/chgbdzuxit56pnkaklm5qwxokgn6lweuqhop3hidwckkwrmyjzpv.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=256, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 256)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "256",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.012128000147640705,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/fg/cfgfys3vlw7yjshuccq3u5a45nvuktsr5vjuvt4eqbwoamswlixb.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=16, BLOCK_M=32, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=1, num_warps=2)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 16, 32)",
+                "num_stages": "1",
+                "num_warps": "2",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.012736000120639801,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/aw/cawb3aufhlcuvp5w444m33xsh2ppl3y5g7psagxqzcer3boy23nf.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=16, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 16, 64)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.014336000196635723,
+              "matches_union": true
+            }
+          ]
+        }
+      ],
+      "fused_compiles": [
+        {
+          "choice": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/c5/cc53jcbgdqm2mnxzanoc3lvwvc7kf2x5zrfu35soe5344ssnyjfg.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+          "status": "compiled"
+        }
+      ],
+      "fused_benchmarks": [
+        {
+          "choice": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpdazockby/c5/cc53jcbgdqm2mnxzanoc3lvwvc7kf2x5zrfu35soe5344ssnyjfg.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+          "fused_ms": 0.007424000184983015
+        }
+      ],
+      "correctness": [
+        {
+          "seed": 0,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 1,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 2,
+          "max_abs_error": 0.0
+        }
+      ],
+      "wrapper": {
+        "triton_launches": [
+          "triton_tem_fused__to_copy_mm_0"
+        ],
+        "extern_calls": [],
+        "extended_template_in_wrapper": false,
+        "tma_descriptor_in_wrapper": false
+      },
+      "runtime_profile": {
+        "calls": 5,
+        "trace_file": "pos_256_256_256_patched_runtime_trace.json",
+        "gpu_events": 5,
+        "kernels_per_call": 1.0,
+        "kernel_names": [
+          "triton_tem_fused__to_copy_mm_0"
+        ],
+        "expected_kernels_per_call": 1,
+        "count_matches_wrapper": true,
+        "recompile_guard": "fail_on_recompile",
+        "correctness_passed": true
+      },
+      "candidate_decisions": [
+        {
+          "extended": true,
+          "tile": [
+            128,
+            256,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            128
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            128
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            256,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pos_256_256_256",
+      "timing_us": {
+        "patched": [
+          3.302908870440911,
+          3.4876471009997814,
+          3.4497759391352076,
+          3.4524649919585633,
+          3.4451665228063413
+        ]
+      },
+      "median_us": {
+        "patched": 3.4497759391352076
+      }
+    },
+    {
+      "name": "pos_2048_1024_256",
+      "kind": "pos",
+      "shape_mnk": [
+        2048,
+        1024,
+        256
+      ],
+      "label": "patched",
+      "multi_nodes": [
+        {
+          "union_allowed_prologue_inps": [
+            "arg1_1",
+            "buf0"
+          ],
+          "choices": [
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/l6/cl6vbsycjr5eg6hge24dn3ofjvlwxopsofcdxj6dnvgylgv2tt7m.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.009535999968647957,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/iq/ciqkuscef7efszoxm5gyoluo4ur3g6d6olay772vywokxw3g7wyj.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.009664000011980534,
+              "matches_union": true
+            },
+            {
+              "str": "ExternKernelCaller(extern_kernels.mm)",
+              "type": "ExternKernelCaller",
+              "allowed_prologue_inps": [],
+              "info": {
+                "backend": "extern",
+                "kernel_call_name": "extern_kernels.mm"
+              },
+              "unfused_ms": 0.009983999654650688,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/4m/c4mvvw43wzbbhsa3tmhngfwake4orwojhqpkdf4hhipqlhn5uswf.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010143999941647053,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/a4/ca4kwourl5kmy3nduxawxfqspmhbte72gfh6473dmogcpwqxe5m2.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.01017600018531084,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/ca/ccay55frzqytozndg2snybzkiihlb7yd5z24wnw2yfepgbtwvajj.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010463999584317207,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/aj/cajfa3cgth2swxjsomik4xmb6ozd2s5vmeovdskef47prtpr5qv4.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 64)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010495999827980995,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/hn/chnfi2twnamdjp6f5los7rhokfud2e7zn5nxi2x7wsuybab5ygar.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010688000358641148,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/me/cmeow43nsrudxlwxg6ambg657bzojnah3khcdwpjbaxahyl74hue.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 64, 64)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.010751999914646149,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/tb/ctbm7hanqnrwqiefhaeo5jlwdq2splaqixn6td4wvw4hehfilcq5.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011071999557316303,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/et/cetow4ptp2rjbs6lndnqk347wynxsb54mekryrqezcjojw3die4e.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=256, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 256)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "256",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011136000044643879,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/53/c53vev7tjwrpjeijau4lvmc2tgiuwykqxgeydpivtrjpp53rxzbd.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.01119999960064888,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/f2/cf2hdgshbuph3e5igdubmbbqko7wwkvsje2jqxzi2ycu5qau7pbm.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011264000087976456,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/77/c77hv7wvqi4jp7fqb3n7qzocqvpqd63lyvqshq6xczbpsf5e5kuu.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "3",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011327999643981457,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/qu/cqubj5wnstrcmhxi4t2miv4wtgmyfjutksz3hnr7p65httafkdzs.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011487999930977821,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/7v/c7vn7h52ggvuhym6evj4jhprsk6v46ehubjuyfulzrvwgqiwdfky.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 128, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011680000461637974,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/h7/ch7w66q3q657vhzzunq4hsjamffzwwzqktk3vaiscgobldqgzv7t.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 128)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011711999773979187,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/n2/cn2r5whlplsnyh7pvigdlo4vbuphqo7lkv5gefyzo3vc7qtc5hf2.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 128)",
+                "num_stages": "4",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.011776000261306763,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/vd/cvdftopru27ylydkqtotupx3tfvifqmjcal76tas3azniuwg6nfz.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 64)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.012160000391304493,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/np/cnp6evzserd2okvye6ej7xtmpaa6a3ylkygdjjdfufbi7hxasvkd.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=128, BLOCK_N=256, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=3, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 64, 256)",
+                "num_stages": "3",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "256",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.012319999746978283,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/eg/cegyn6oodpmoxg7jlrjardsqfhzjie6yfmaswha74umxwae4fb5f.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, A_ROW_MAJOR=True, BLOCK_K=64, BLOCK_M=256, BLOCK_N=128, B_ROW_MAJOR=True, EVEN_K=True, GROUP_M=8, NUM_SMS=132, TMA_EXPERIMENTAL_API=False, TMA_SIZE=128, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(256, 64, 128)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "256",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.012480000033974648,
+              "matches_union": false
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/hk/chkkuupr43s4bigwv73m7fr5rw4eqd3eanxe5tqjhc4vhoefz2bq.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 128)",
+                "num_stages": "2",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "128",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.013535999692976475,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/di/cdi4tkkmeibhq25zhegrbtgimsu7dufdqughf5xtfvssm6bq35xh.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 64)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.015424000099301338,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/xe/cxemipm5ks5jmsl73pj2gi3vbpvn4p2xc3t35yxwsvie2vv76mja.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=32, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 128, 32)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.015519999898970127,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/ky/ckyktvkt7h5vrhtadppxodbwzhcnxcwsuncrydgs5cqz45q35kf2.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=16, BLOCK_M=64, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=2, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 16, 64)",
+                "num_stages": "2",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.016831999644637108,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/fh/cfhzonbpkwmvc6vaylymdi6k3pp5e5q64vooz55ryv3cfit4f7ls.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=32, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 32, 64)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.018079999834299088,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/lt/clthtxpf6h35jtxphheiv5gt2ooyz6mdehksn6n6ncuz2gljkbqo.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 32, 32)",
+                "num_stages": "5",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.01817600056529045,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/lf/clfsvxh4vxwfxusvgi2ajgvvedn6x25cgffnp74wrsnaz3ph3t5e.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=128, BLOCK_M=64, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=4)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(64, 128, 32)",
+                "num_stages": "5",
+                "num_warps": "4",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "64",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.020735999569296837,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/ca/ccaw4ofr5shl352cyvulhrnw2wyicyzpzjgp6kdydlcol5lnd3ys.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=16, BLOCK_M=32, BLOCK_N=32, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=1, num_warps=2)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(32, 16, 32)",
+                "num_stages": "1",
+                "num_warps": "2",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "32",
+                "BLOCK_N": "32",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.020800000056624413,
+              "matches_union": true
+            },
+            {
+              "str": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/e4/ce43sjllbtqsgc6dzfstd5eayv3n2eeqikvbiskw4myrzrilqjnh.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=32, BLOCK_M=128, BLOCK_N=64, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=4, num_warps=8)",
+              "type": "TritonTemplateCaller",
+              "allowed_prologue_inps": [
+                "arg1_1",
+                "buf0"
+              ],
+              "info": {
+                "tile_shape": "(128, 32, 64)",
+                "num_stages": "4",
+                "num_warps": "8",
+                "GROUP_M": "8",
+                "allow_tf32": "False",
+                "acc_type": "tl.float32",
+                "matrix_instr_nonkdim": "0",
+                "waves_per_eu": "0",
+                "kpack": "2",
+                "epilogue_subtile": "0",
+                "BLOCK_M": "128",
+                "BLOCK_N": "64",
+                "backend": "Triton"
+              },
+              "unfused_ms": 0.03420799970626831,
+              "matches_union": true
+            }
+          ]
+        }
+      ],
+      "fused_compiles": [
+        {
+          "choice": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/l6/cl6vbsycjr5eg6hge24dn3ofjvlwxopsofcdxj6dnvgylgv2tt7m.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+          "status": "compiled"
+        }
+      ],
+      "fused_benchmarks": [
+        {
+          "choice": "TritonTemplateCaller(/tmp/tcc_ab_cache_arm0/tmpr39lk4mz/l6/cl6vbsycjr5eg6hge24dn3ofjvlwxopsofcdxj6dnvgylgv2tt7m.py, ACC_TYPE='tl.float32', ALLOW_TF32=False, BLOCK_K=64, BLOCK_M=128, BLOCK_N=128, EVEN_K=True, GROUP_M=8, USE_FAST_ACCUM=False, num_stages=5, num_warps=8)",
+          "fused_ms": 0.02953599952161312
+        }
+      ],
+      "correctness": [
+        {
+          "seed": 0,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 1,
+          "max_abs_error": 0.0
+        },
+        {
+          "seed": 2,
+          "max_abs_error": 0.0
+        }
+      ],
+      "wrapper": {
+        "triton_launches": [
+          "triton_poi_fused__to_copy_0",
+          "triton_tem_fused__to_copy_mm_1"
+        ],
+        "extern_calls": [],
+        "extended_template_in_wrapper": false,
+        "tma_descriptor_in_wrapper": false
+      },
+      "runtime_profile": {
+        "calls": 5,
+        "trace_file": "pos_2048_1024_256_patched_runtime_trace.json",
+        "gpu_events": 10,
+        "kernels_per_call": 2.0,
+        "kernel_names": [
+          "triton_poi_fused__to_copy_0",
+          "triton_tem_fused__to_copy_mm_1"
+        ],
+        "expected_kernels_per_call": 2,
+        "count_matches_wrapper": true,
+        "recompile_guard": "fail_on_recompile",
+        "correctness_passed": true
+      },
+      "candidate_decisions": [
+        {
+          "extended": true,
+          "tile": [
+            128,
+            256,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            128
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            128
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            256,
+            128,
+            64
+          ]
+        },
+        {
+          "extended": true,
+          "tile": [
+            128,
+            128,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pos_2048_1024_256",
+      "timing_us": {
+        "patched": [
+          7.608754913528244,
+          7.576757305451022,
+          7.557288970587389,
+          7.5425657143155895,
+          7.546989661288926
+        ]
+      },
+      "median_us": {
+        "patched": 7.557288970587389
+      }
+    }
+  ],
+  "elapsed_seconds": 11.417566628
+}

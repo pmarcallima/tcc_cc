@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-03T22:30:00+00:00",
+  "modal_app": {
+    "app_id": "ap-tXosi6V70ys9IoNpJTXMdq",
+    "description": "tcc-contrato-tma",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-11-03 19:00 (-03:00)",
+    "stopped_at": "2026-11-03 19:01 (-03:00)"
+  },
+  "local_modal_run_processes": [],
+  "local_command_exit_code": null,
+  "notes": [
+    "A saída do comando de coleta foi encadeada a `tail -40` quando executada; o código de saída do `modal run` não foi registrado.",
+    "Horários de criação e parada do app vêm de `modal app list`, que os exibe sem segundos."
+  ]
+}

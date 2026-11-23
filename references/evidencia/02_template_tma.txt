@@ -1,0 +1,47 @@
+FONTE: torch/_inductor/kernel/templates/triton_persistent_tma_mm.py.jinja
+================================================================================
+O template persistent+TMA (usado em Hopper/H100). NÃO usa load_input. Cria um
+"tensor descriptor" e carrega os operandos via instrução de hardware TMA, que copia
+da memória global direto para a shared — sem passar por tl.load por thread. Logo,
+NÃO existe ponto onde o Inductor possa injetar o prologue.
+--------------------------------------------------------------------------------
+Setup do descriptor (linhas 21-34, caminho TMA_EXPERIMENTAL_API):
+
+    triton.language.extra.cuda.experimental_device_tensormap_create2d(
+        desc_ptr=a_desc_ptr,
+        global_address=A,
+        load_size=[BLOCK_M, BLOCK_K] if A_ROW_MAJOR else [BLOCK_K, BLOCK_M],
+        global_size=[M, K] if A_ROW_MAJOR else [K, M],
+        element_ty=A.dtype.element_ty,
+    )
+    ... (idem para B)
+
+--------------------------------------------------------------------------------
+Carga dos operandos dentro do loop K (linhas 73-95):
+
+        for rk in tl.range(0, K, BLOCK_K):
+            {%- if TMA_EXPERIMENTAL_API %}
+            a = tl._experimental_descriptor_load(                  # <== HARDWARE, sem hook
+                a_desc_ptr,
+                [rm, rk] if A_ROW_MAJOR else [rk, rm],
+                [BLOCK_M, BLOCK_K] if A_ROW_MAJOR else [BLOCK_K, BLOCK_M],
+                A.dtype.element_ty,
+            )
+            b = tl._experimental_descriptor_load(                  # <== HARDWARE, sem hook
+                b_desc_ptr,
+                [rk, rn] if B_ROW_MAJOR else [rn, rk],
+                [BLOCK_K, BLOCK_N] if B_ROW_MAJOR else [BLOCK_N, BLOCK_K],
+                B.dtype.element_ty,
+            )
+            {%- else %}
+            a = tl.load_tensor_descriptor(a_desc, [rm, rk] if A_ROW_MAJOR else [rk, rm])
+            b = tl.load_tensor_descriptor(b_desc, [rk, rn] if B_ROW_MAJOR else [rn, rk])
+            {%- endif %}
+            ...
+            acc += tl.dot(a if A_ROW_MAJOR else a.T, b if B_ROW_MAJOR else b.T, ...)
+
+--------------------------------------------------------------------------------
+PONTO-CHAVE: `a` vem de `_experimental_descriptor_load` / `load_tensor_descriptor`
+— uma cópia de hardware (TMA), fixa no template. NÃO há macro load_input, NÃO há
+subgrafo controlável. O Inductor não consegue inserir (x+1) aqui. Por isso o
+prologue fica em kernel separado + buffer DRAM. Contraste direto com 01_template_padrao.txt.

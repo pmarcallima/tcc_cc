@@ -1,0 +1,17 @@
+{
+  "cases_verified": 2,
+  "ir": [
+    {
+      "path": "ir/73X42U72YFHAMLNVJZQALCU3OUVNO53T56U5LTNHLKWZ6SPGSAGA/triton_tem_fused_add_mm_mul_sub_0.ttir",
+      "descriptor_loads": 3,
+      "ttir_output_stores": 1,
+      "tma_wgmma": true
+    },
+    {
+      "path": "ir/QQ4CPWTIBLI5XL22UYNFPG4AF7UKKEJGZRBFPBZZDQANWS4DCI6A/triton_tem_fused_add_mm_mul_sub_0.ttir",
+      "descriptor_loads": 3,
+      "ttir_output_stores": 1,
+      "tma_wgmma": true
+    }
+  ]
+}

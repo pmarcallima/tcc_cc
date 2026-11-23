@@ -1,0 +1,335 @@
+{
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "native_config": {
+    "gemm_backends": "ATEN,TRITON,CPP",
+    "persistent_tma_enabled": false,
+    "prologue_fusion": true
+  },
+  "method": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "rounds": 5,
+    "rep_ms": 30,
+    "atol": 0.125,
+    "rtol": 0.01
+  },
+  "cases": [
+    {
+      "name": "default_256_256_256",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "mode": "default",
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0"
+          ],
+          "extern_calls": [
+            "extern_kernels.mm"
+          ],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 20,
+            "names": [
+              "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+              "triton_poi_fused__to_copy_0"
+            ]
+          }
+        },
+        "patched": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_poi_fused__to_copy_0"
+          ],
+          "extern_calls": [
+            "extern_kernels.mm"
+          ],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 20,
+            "names": [
+              "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+              "triton_poi_fused__to_copy_0"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          5.0459672547744265,
+          5.054945852242264,
+          4.97375651919094,
+          4.938764801584028,
+          4.8973408383382875
+        ],
+        "patched": [
+          5.0356874242424965,
+          5.0005246270523385,
+          4.933302870818547,
+          4.937817747070945,
+          4.870615698767047
+        ]
+      },
+      "graph_medians_us": {
+        "original": 4.97375651919094,
+        "patched": 4.937817747070945
+      }
+    },
+    {
+      "name": "max_autotune_256_256_256",
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "mode": "max_autotune",
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0009765625,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 3.814697265625e-06,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0009765625,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        },
+        "patched": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": false
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": false
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": false
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          3.307572464463572,
+          3.326058240128744,
+          3.2917309022649417,
+          3.2663691358198745,
+          3.297241795715408
+        ],
+        "patched": [
+          3.46279071506701,
+          3.431501830976034,
+          3.4460768884825472,
+          3.4250763600522824,
+          3.4194937074817897
+        ]
+      },
+      "graph_medians_us": {
+        "original": 3.297241795715408,
+        "patched": 3.431501830976034
+      }
+    },
+    {
+      "name": "max_autotune_2048_1024_256",
+      "shape_mnk": [
+        2048,
+        1024,
+        256
+      ],
+      "mode": "max_autotune",
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        },
+        "patched": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0,
+              "exact_vs_original": true
+            }
+          ],
+          "triton_launches": [
+            "triton_tem_fused__to_copy_mm_0"
+          ],
+          "extern_calls": [],
+          "candidate_decisions": [],
+          "extended_template_in_wrapper": false,
+          "profiler": {
+            "calls": 10,
+            "gpu_events": 10,
+            "names": [
+              "triton_tem_fused__to_copy_mm_0"
+            ]
+          }
+        }
+      },
+      "graph_samples_us": {
+        "original": [
+          7.6261003062410175,
+          7.58513133935254,
+          7.580379656891324,
+          7.510802900190834,
+          7.489725071786228
+        ],
+        "patched": [
+          7.6966770950432695,
+          7.536586761474609,
+          7.560145478003581,
+          7.5308728284862525,
+          7.504743174777005
+        ]
+      },
+      "graph_medians_us": {
+        "original": 7.580379656891324,
+        "patched": 7.536586761474609
+      }
+    }
+  ],
+  "elapsed_seconds": 14.386017943999999
+}

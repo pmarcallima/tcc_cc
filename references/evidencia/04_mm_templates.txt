@@ -1,0 +1,32 @@
+FONTE: torch/_inductor/kernel/mm.py  (linhas 84-101)
+================================================================================
+Definição dos dois templates. A diferença: o padrão liga `prologue_loads_all_inputs`;
+o TMA não. Essa flag é o que popula os inputs como "fundíveis em prologue".
+--------------------------------------------------------------------------------
+
+mm_template = TritonTemplate(
+    name="mm",
+    grid=mm_grid,
+    source=load_kernel_template("triton_mm")
+    if (torch.version.hip is None) or triton_version >= "3.3.0"
+    else load_kernel_template("triton_mm_rocm"),
+    cache_codegen_enabled_for_template=True,
+    prologue_loads_all_inputs=True,            # <== PADRÃO: prologue habilitado
+)
+
+persistent_tma_mm_template = TritonTemplate(
+    name="mm_persistent_tma",
+    grid=persistent_mm_grid,
+    source=load_kernel_template("triton_persistent_tma_mm"),
+    # (sem prologue_loads_all_inputs)          # <== TMA: ausente
+)
+
+--------------------------------------------------------------------------------
+LIGAÇÃO com select_algorithm.py:782-783 (dentro de def_kernel):
+
+    if self.prologue_loads_all_inputs:
+        self.prologue_supported_inputs.add(input_node.get_name())
+
+PONTO-CHAVE: só o template padrão marca os inputs como suportados para prologue.
+Isso alimenta `allowed_prologue_inps`, que é justamente o que o check em
+scheduler.py:4166 compara para decidir pular (ver 03_scheduler_todo.txt).

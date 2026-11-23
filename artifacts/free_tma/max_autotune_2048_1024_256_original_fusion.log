@@ -1,0 +1,13 @@
+===== attempting fusion (1/10): 2 nodes =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[2048, 256]', 'origins=OrderedSet([convert_element_type])', 'stack_traces = {', '  File "/root/modal_inductor_free_selection.py", line 38, in max_autotune_2048_1024_256_original', '    return x.to(torch.float16) @ weight', '           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+found 1 possible fusions
+can fuse (benchmark): fusing OrderedSet(['buf0']) with OrderedSet(['buf1']) cause 1.457x speedup
+fusing op0 with op1
+completed fusion round (1/10): fused 2 nodes into 1 nodes
+
+===== fusion complete (1 iterations) =====
+fuse_nodes_once, candidates:
+  FusedSchedulerNode(nodes=op0_op1), snodes: ['SchedulerNode(name=\'op0\'), Pointwise([\'[2048, 256]\', \'origins=OrderedSet([convert_element_type])\', \'stack_traces = {\', \'  File "/root/modal_inductor_free_selection.py", line 38, in max_autotune_2048_1024_256_original\', \'    return x.to(torch.float16) @ weight\', \'           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\', \'\', \'}\'])', "SchedulerNode(name='op1')"]
+found 0 possible fusions

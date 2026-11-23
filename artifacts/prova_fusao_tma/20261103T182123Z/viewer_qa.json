@@ -1,0 +1,15 @@
+{
+  "formats": 2,
+  "calls_per_format": 5,
+  "control_kernel_counts": [
+    2,
+    2,
+    1
+  ],
+  "widths": [
+    390,
+    728
+  ],
+  "javascript_errors": [],
+  "passed": true
+}

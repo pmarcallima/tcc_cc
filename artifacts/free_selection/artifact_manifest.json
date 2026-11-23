@@ -1,0 +1,15 @@
+[
+  "default_256_256_256_original_fusion.log",
+  "default_256_256_256_original_output_code.py",
+  "default_256_256_256_patched_fusion.log",
+  "default_256_256_256_patched_output_code.py",
+  "max_autotune_2048_1024_256_original_fusion.log",
+  "max_autotune_2048_1024_256_original_output_code.py",
+  "max_autotune_2048_1024_256_patched_fusion.log",
+  "max_autotune_2048_1024_256_patched_output_code.py",
+  "max_autotune_256_256_256_original_fusion.log",
+  "max_autotune_256_256_256_original_output_code.py",
+  "max_autotune_256_256_256_patched_fusion.log",
+  "max_autotune_256_256_256_patched_output_code.py",
+  "patch_snapshot.py"
+]

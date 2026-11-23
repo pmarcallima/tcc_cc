@@ -1,0 +1,916 @@
+{
+  "scope": "planned diagnostic cases only; no general contract or performance claim",
+  "all_executions_passed": true,
+  "collection_checks": {
+    "collection_completed": true,
+    "all_requested_completed": true,
+    "known_distinct_cases": true,
+    "experiment_snapshot_present": true,
+    "positive_identity": true,
+    "positive_paths": true,
+    "tail_m_identity": true,
+    "tail_m_paths": true,
+    "tail_k_identity": true,
+    "tail_k_paths": true,
+    "noncontiguous_identity": true,
+    "noncontiguous_paths": true,
+    "offset_identity": true,
+    "offset_paths": true,
+    "broadcast_identity": true,
+    "broadcast_paths": true,
+    "dtype_identity": true,
+    "dtype_paths": true,
+    "prologue_b_identity": true,
+    "prologue_b_paths": true,
+    "same_patch_snapshot": true
+  },
+  "protocol_conformant": true,
+  "planned_coverage_complete": false,
+  "coverage": {
+    "positive": true,
+    "tail_m": true,
+    "tail_k": true,
+    "noncontiguous": false,
+    "offset": false,
+    "dtype": true,
+    "broadcast": false,
+    "prologue_b": true
+  },
+  "paths": [
+    {
+      "case": "positive",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "accepted"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "positive",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "accepted"
+      },
+      "target_observed": true,
+      "filter_called": true,
+      "filter_reasons": [
+        "accepted"
+      ],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": true,
+      "tma_in_wrapper": true,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "tail_m",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "tail_m"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x8_64x16_2x1_v_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "tail_m",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "tail_m"
+      },
+      "target_observed": true,
+      "filter_called": true,
+      "filter_reasons": [
+        "tail_m"
+      ],
+      "native_delegation_generated": true,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x8_64x16_2x1_v_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "tail_k",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "tail_k"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "tail_k",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "tail_k"
+      },
+      "target_observed": true,
+      "filter_called": true,
+      "filter_reasons": [
+        "tail_k"
+      ],
+      "native_delegation_generated": true,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "noncontiguous",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "stride_a"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_32x64_64x16_4x2_h_bz_NTN",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "noncontiguous",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "stride_a"
+      },
+      "target_observed": false,
+      "filter_called": true,
+      "filter_reasons": [
+        "accepted"
+      ],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_32x64_64x16_4x2_h_bz_NTN",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "offset",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "offset_a"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "offset",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "offset_a"
+      },
+      "target_observed": false,
+      "filter_called": true,
+      "filter_reasons": [
+        "accepted"
+      ],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "broadcast",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "prologue",
+        "reason": "prologue_load_layout"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+        "triton_poi_fused__to_copy_add_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "broadcast",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "prologue",
+        "reason": "prologue_load_layout"
+      },
+      "target_observed": false,
+      "filter_called": true,
+      "filter_reasons": [
+        "accepted"
+      ],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+        "triton_poi_fused__to_copy_add_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "dtype",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "dtype"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "dtype",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "filter",
+        "reason": "dtype"
+      },
+      "target_observed": true,
+      "filter_called": true,
+      "filter_reasons": [
+        "dtype"
+      ],
+      "native_delegation_generated": true,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_tst_64x24_64x16_2x4_h_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "prologue_b",
+      "label": "original",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "prologue",
+        "reason": "prologue_b"
+      },
+      "target_observed": false,
+      "filter_called": false,
+      "filter_reasons": [],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        2,
+        2,
+        2
+      ],
+      "kernel_names": [
+        "nvjet_sm90_hsh_64x24_64x16_2x4_h_bz_NNT",
+        "triton_poi_fused__to_copy_0"
+      ],
+      "unassigned_kernels": []
+    },
+    {
+      "case": "prologue_b",
+      "label": "patched",
+      "passed": true,
+      "checks": {
+        "executed": true,
+        "input_scenario": true,
+        "three_seeds_correct": true,
+        "profile_outputs_correct": true,
+        "no_recompilation": true,
+        "three_calls_assigned": true,
+        "wrapper_matches_record": true,
+        "kernels_match_wrapper": true,
+        "decision_consistency": true,
+        "original_unpatched": true,
+        "extension_has_accepted_candidate": true,
+        "filter_has_native_eligibility": true,
+        "rejected_candidates_not_used_as_extension": true,
+        "no_unsupported_fused_extension": true,
+        "fusion_log_present": true
+      },
+      "protocol_passed": true,
+      "protocol_checks": {
+        "candidate_counters_recorded": true,
+        "single_matmul_choices_recorded": true,
+        "one_attempt_per_template": true,
+        "actual_choices_match_counters": true,
+        "actual_template_counts_limited": true,
+        "tma_config_fixed": true,
+        "tma_counters_match_filter": true
+      },
+      "target": {
+        "stage": "prologue",
+        "reason": "prologue_b"
+      },
+      "target_observed": true,
+      "filter_called": true,
+      "filter_reasons": [
+        "accepted"
+      ],
+      "native_delegation_generated": false,
+      "native_tma_excluded_before_filter": false,
+      "prologue_reasons": [
+        "prologue_b"
+      ],
+      "extension_in_wrapper": false,
+      "tma_in_wrapper": false,
+      "kernels_per_call": [
+        1,
+        1,
+        1
+      ],
+      "kernel_names": [
+        "triton_tem_fused__to_copy_mm_0"
+      ],
+      "unassigned_kernels": []
+    }
+  ]
+}

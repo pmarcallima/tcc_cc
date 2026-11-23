@@ -1,0 +1,8 @@
+{
+  "smoke": false,
+  "sessions": 3,
+  "sources_sha256": {
+    "modal_four_paths.py": "474badd874296319a5238b4d82ffd88d98c768e364b2b15388b3ebec6e7fcdfe",
+    "four_path_benchmark.py": "1b503dcb573090b92bddcb2cd75ed6d20fab9b7fac6e83d6425c9ab2b6cfee83"
+  }
+}

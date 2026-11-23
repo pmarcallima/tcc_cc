@@ -1,0 +1,5 @@
+case,path,kernels_per_call,extended_candidates,graph_median_us
+max_autotune_256_256_256,original,1,0,3.369283676147461
+max_autotune_256_256_256,patched,1,8,3.3768092673228676
+max_autotune_2048_1024_256,original,1,0,6.198661303033634
+max_autotune_2048_1024_256,patched,1,8,6.1915675799051915

@@ -1,0 +1,13 @@
+===== attempting fusion (1/10): 2 nodes =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[1024, 1024]', 'origins=OrderedSet([convert_element_type])', 'stack_traces = {', '  File "/root/modal_selecao_prologo_ab.py", line 186, in arm2_neg_b_1024_1024_1024_patched', '    return x @ w.to(torch.float16)', '               ^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+found 1 possible fusions
+cannot fuse (benchmark): fusing OrderedSet(['buf0']) with OrderedSet(['buf1']) cause 1.096x slowdown
+completed fusion round (1/10): fused 2 nodes into 2 nodes
+
+===== fusion complete (1 iterations) =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[1024, 1024]', 'origins=OrderedSet([convert_element_type])', 'stack_traces = {', '  File "/root/modal_selecao_prologo_ab.py", line 186, in arm2_neg_b_1024_1024_1024_patched', '    return x @ w.to(torch.float16)', '               ^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+found 1 possible fusions

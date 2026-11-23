@@ -1,0 +1,16 @@
+===== attempting fusion (1/10): 2 nodes =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[256, 256]', 'origins=OrderedSet([add, convert_element_type])', 'stack_traces = {', '  File "/root/modal_contrato_tma.py", line 69, in contract_broadcast_patched', '    return (x.to(torch.float16) + scale) @ w', '            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+cannot fuse op0 with op1: prologue fusion that must be upcast to fp32 not profitable for low precision templates
+cannot fuse op1 with op0: node1 must go before node2
+found 0 possible fusions
+completed fusion round (1/10): fused 2 nodes into 2 nodes
+
+===== fusion complete (1 iterations) =====
+fuse_nodes_once, candidates:
+  SchedulerNode(name='op0'), Pointwise(['[256, 256]', 'origins=OrderedSet([add, convert_element_type])', 'stack_traces = {', '  File "/root/modal_contrato_tma.py", line 69, in contract_broadcast_patched', '    return (x.to(torch.float16) + scale) @ w', '            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^', '', '}'])
+  SchedulerNode(name='op1')
+cannot fuse op0 with op1: prologue fusion that must be upcast to fp32 not profitable for low precision templates
+cannot fuse op1 with op0: node1 must go before node2
+found 0 possible fusions

@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "requested_cases": [
+    "positive",
+    "tail_m",
+    "tail_k",
+    "noncontiguous",
+    "offset",
+    "broadcast",
+    "dtype",
+    "prologue_b"
+  ],
+  "completed_cases": [
+    "positive",
+    "tail_m",
+    "tail_k",
+    "noncontiguous",
+    "offset",
+    "broadcast",
+    "dtype",
+    "prologue_b"
+  ],
+  "modal_app_id": "ap-tXosi6V70ys9IoNpJTXMdq",
+  "method": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "profile_calls": 3,
+    "atol": 0.125,
+    "rtol": 0.01,
+    "case_timeout_seconds": 120,
+    "client_wait_seconds": 180,
+    "tma_tile": [
+      64,
+      128,
+      64
+    ],
+    "tma_warps": 4,
+    "tma_stages": 3,
+    "candidates": "one per common/TMA template; ATen retained",
+    "scope": "diagnostic contract/fallback; not free selection or speedup"
+  }
+}

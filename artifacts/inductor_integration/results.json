@@ -1,0 +1,427 @@
+{
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "scope": "experimental in-memory template patch; forced TMA and fixed tiles; no custom_op",
+  "method": {
+    "tile": [
+      64,
+      128,
+      64
+    ],
+    "stages": 3,
+    "warps": 4,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "benchmark_rounds": 7,
+    "rep_ms": 30,
+    "prologue": "InvokeQuant(x*scale+(scale-1)); compiler arithmetic",
+    "atol": 0.125,
+    "rtol": 0.01
+  },
+  "cases": [
+    {
+      "shape_mnk": [
+        256,
+        256,
+        256
+      ],
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "relative_l2_error": 0.0003920422459486872,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003869007632602006,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003941169416066259,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 20,
+          "profiler_calls": 10,
+          "kernels_per_call": 2.0,
+          "kernel_names": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_mm_1"
+            ]
+          }
+        },
+        "patched_split": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "relative_l2_error": 0.0003920422459486872,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003869007632602006,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003941169416066259,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 20,
+          "profiler_calls": 10,
+          "kernels_per_call": 2.0,
+          "kernel_names": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_mm_1"
+            ]
+          }
+        },
+        "patched_fused": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.03125,
+              "relative_l2_error": 0.0003920404415111989,
+              "exact_vs_original": false,
+              "max_abs_vs_original": 0.015625
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003869007632602006,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003941169416066259,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 10,
+          "profiler_calls": 10,
+          "kernels_per_call": 1.0,
+          "kernel_names": [
+            "triton_tem_fused_add_mm_mul_sub_0"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_tem_fused_add_mm_mul_sub_0"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 1.0,
+            "kernel_names": [
+              "triton_tem_fused_add_mm_mul_sub_0"
+            ]
+          }
+        }
+      },
+      "pair": {
+        "original": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        },
+        "patched_split": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        },
+        "patched_fused": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        }
+      },
+      "samples_us": {
+        "original": [
+          6.408127844333649,
+          6.3956958508630946,
+          6.3610770381413975,
+          6.379739039721974,
+          6.373886692332712,
+          6.388637037188919,
+          6.387747137040054
+        ],
+        "patched_split": [
+          6.534416502621507,
+          6.434020117008487,
+          6.387832924559876,
+          6.396163018393856,
+          6.421142887501489,
+          6.4018793206997024,
+          6.4086012757582465
+        ],
+        "patched_fused": [
+          6.2508415654708775,
+          6.2119017567550925,
+          6.183731942563443,
+          6.162238632660567,
+          6.161991414082409,
+          6.172454883070554,
+          6.214044349534171
+        ]
+      },
+      "medians_us": {
+        "original": 6.387747137040054,
+        "patched_split": 6.4086012757582465,
+        "patched_fused": 6.183731942563443
+      }
+    },
+    {
+      "shape_mnk": [
+        512,
+        384,
+        256
+      ],
+      "paths": {
+        "original": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039197434671223164,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039040547562763095,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039574262336827815,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 20,
+          "profiler_calls": 10,
+          "kernels_per_call": 2.0,
+          "kernel_names": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_mm_1"
+            ]
+          }
+        },
+        "patched_split": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039197434671223164,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039040547562763095,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039574262336827815,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 20,
+          "profiler_calls": 10,
+          "kernels_per_call": 2.0,
+          "kernel_names": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_poi_fused_add_mul_sub_0",
+            "triton_tem_fused_mm_1"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 2.0,
+            "kernel_names": [
+              "triton_poi_fused_add_mul_sub_0",
+              "triton_tem_fused_mm_1"
+            ]
+          }
+        },
+        "patched_fused": {
+          "correctness": [
+            {
+              "seed": 0,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039195764111354947,
+              "exact_vs_original": false,
+              "max_abs_vs_original": 0.03125
+            },
+            {
+              "seed": 1,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.0003904194454662502,
+              "exact_vs_original": false,
+              "max_abs_vs_original": 0.015625
+            },
+            {
+              "seed": 2,
+              "allclose": true,
+              "max_abs_error": 0.0625,
+              "relative_l2_error": 0.00039574262336827815,
+              "exact_vs_original": true,
+              "max_abs_vs_original": 0.0
+            }
+          ],
+          "kernel_events": 10,
+          "profiler_calls": 10,
+          "kernels_per_call": 1.0,
+          "kernel_names": [
+            "triton_tem_fused_add_mm_mul_sub_0"
+          ],
+          "custom_op_present": false,
+          "triton_launches": [
+            "triton_tem_fused_add_mm_mul_sub_0"
+          ],
+          "benchmark_context_profiler": {
+            "calls": 10,
+            "kernels_per_call": 1.0,
+            "kernel_names": [
+              "triton_tem_fused_add_mm_mul_sub_0"
+            ]
+          }
+        }
+      },
+      "pair": {
+        "original": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        },
+        "patched_split": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        },
+        "patched_fused": {
+          "exact_vs_original": true,
+          "max_abs_vs_original": 0.0
+        }
+      },
+      "samples_us": {
+        "original": [
+          6.451259562687844,
+          6.4106387617700396,
+          6.400791924409192,
+          6.397476906959827,
+          6.416662698666725,
+          6.380691343140834,
+          6.396425746337712
+        ],
+        "patched_split": [
+          6.52526629031004,
+          6.623981196499435,
+          6.470321969288151,
+          6.492095192273458,
+          6.538913626419871,
+          6.472472293036324,
+          6.463497669197793
+        ],
+        "patched_fused": [
+          6.324696797196584,
+          6.321787326893908,
+          6.289315892157154,
+          6.2980485296695035,
+          6.292140379286649,
+          6.312569988643662,
+          6.3079779848046265
+        ]
+      },
+      "medians_us": {
+        "original": 6.400791924409192,
+        "patched_split": 6.492095192273458,
+        "patched_fused": 6.3079779848046265
+      }
+    }
+  ],
+  "elapsed_seconds": 27.790757752999998
+}

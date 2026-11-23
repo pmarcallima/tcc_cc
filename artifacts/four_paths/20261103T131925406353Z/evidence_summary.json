@@ -1,0 +1,58 @@
+{
+  "sessions": 3,
+  "cases_per_session": 14,
+  "candidate_paths": 672,
+  "valid_candidate_paths": 672,
+  "failed_candidate_paths": 0,
+  "numerical_checks": 1896,
+  "max_abs_error": 0.125,
+  "max_relative_l2": 5.596706614596769e-05,
+  "session_elapsed_seconds": [
+    379.59213113,
+    382.332330934,
+    392.133574995
+  ],
+  "environments": [
+    {
+      "torch": "2.13.0+cu130",
+      "triton": "3.7.1",
+      "cuda": "13.0",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "sms": 132,
+      "python": "3.12.10",
+      "nvidia_smi": "name, uuid, driver_version, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W]\nNVIDIA H100 80GB HBM3, GPU-867f0acc-3fba-11e8-6ef2-6bcb5d4ebe46, 610.57.04, 345 MHz, 2619 MHz, 700.00 W\n"
+    },
+    {
+      "torch": "2.13.0+cu130",
+      "triton": "3.7.1",
+      "cuda": "13.0",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "sms": 132,
+      "python": "3.12.10",
+      "nvidia_smi": "name, uuid, driver_version, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W]\nNVIDIA H100 80GB HBM3, GPU-e2c2969a-4b76-d0fb-df5c-38c98e89648b, 610.57.04, 345 MHz, 2619 MHz, 700.00 W\n"
+    },
+    {
+      "torch": "2.13.0+cu130",
+      "triton": "3.7.1",
+      "cuda": "13.0",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "sms": 132,
+      "python": "3.12.10",
+      "nvidia_smi": "name, uuid, driver_version, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W]\nNVIDIA H100 80GB HBM3, GPU-c482cd33-12cc-7fdd-3208-87348929e4bd, 610.57.04, 345 MHz, 2619 MHz, 700.00 W\n"
+    }
+  ],
+  "wgmma_a_modes_by_path": {
+    "std_split": [
+      "shared"
+    ],
+    "std_fused": [
+      "registers"
+    ],
+    "tma_split": [
+      "shared"
+    ],
+    "tma_fused": [
+      "registers"
+    ]
+  }
+}
