@@ -2,6 +2,8 @@
 
 Código e dados experimentais do TCC de Pedro M. Lima. O trabalho investiga como o TorchInductor pode converter ou transformar uma matriz dentro do mesmo kernel que a multiplica, mantendo as cargas por Tensor Memory Accelerator (TMA) na NVIDIA H100.
 
+[Ler o artigo completo (PDF)](docs/artigo.pdf)
+
 ## O que cada experimento mostra
 
 | Experimento | Pergunta e resultado | Evidência |
